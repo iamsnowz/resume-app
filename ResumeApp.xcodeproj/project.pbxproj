@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		7805814827B6C23C0013F5A3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7805814727B6C23C0013F5A3 /* Realm */; };
 		7805814A27B6C23C0013F5A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7805814927B6C23C0013F5A3 /* RealmSwift */; };
+		786E425C27BB9C9C00EF525A /* Nibbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425827BB9C9C00EF525A /* Nibbable.swift */; };
+		786E425D27BB9C9C00EF525A /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */; };
+		786E425E27BB9C9C00EF525A /* NibFileOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */; };
+		786E425F27BB9C9C00EF525A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425B27BB9C9C00EF525A /* CustomButton.swift */; };
+		786E426627BB9CBF00EF525A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426027BB9CBF00EF525A /* UITableView.swift */; };
+		786E426727BB9CBF00EF525A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426127BB9CBF00EF525A /* UIColor.swift */; };
+		786E426827BB9CBF00EF525A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426227BB9CBF00EF525A /* UIViewController.swift */; };
+		786E426927BB9CBF00EF525A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426327BB9CBF00EF525A /* Date.swift */; };
+		786E426A27BB9CBF00EF525A /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426427BB9CBF00EF525A /* UITextView.swift */; };
+		786E426B27BB9CBF00EF525A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426527BB9CBF00EF525A /* UIView.swift */; };
+		786E427127BB9D2600EF525A /* ResumeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426F27BB9D2600EF525A /* ResumeListViewController.swift */; };
+		786E427227BB9D2600EF525A /* ResumeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E427027BB9D2600EF525A /* ResumeListViewController.xib */; };
+		786E427827BB9E0A00EF525A /* ResumeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E427627BB9E0A00EF525A /* ResumeEditorViewController.swift */; };
+		786E427927BB9E0A00EF525A /* ResumeEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E427727BB9E0A00EF525A /* ResumeEditorViewController.xib */; };
+		786E428227BB9F8C00EF525A /* ResumeContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E428027BB9F8C00EF525A /* ResumeContentViewController.swift */; };
+		786E428327BB9F8C00EF525A /* ResumeContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E428127BB9F8C00EF525A /* ResumeContentViewController.xib */; };
 		78ACA73A27B6C1B2007AC1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */; };
 		78ACA73C27B6C1B2007AC1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */; };
 		78ACA74327B6C1B3007AC1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78ACA74227B6C1B3007AC1D1 /* Assets.xcassets */; };
@@ -36,6 +52,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		786E425827BB9C9C00EF525A /* Nibbable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nibbable.swift; sourceTree = "<group>"; };
+		786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
+		786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibFileOwnerLoadable.swift; sourceTree = "<group>"; };
+		786E425B27BB9C9C00EF525A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		786E426027BB9CBF00EF525A /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		786E426127BB9CBF00EF525A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		786E426227BB9CBF00EF525A /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		786E426327BB9CBF00EF525A /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		786E426427BB9CBF00EF525A /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		786E426527BB9CBF00EF525A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		786E426F27BB9D2600EF525A /* ResumeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListViewController.swift; sourceTree = "<group>"; };
+		786E427027BB9D2600EF525A /* ResumeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeListViewController.xib; sourceTree = "<group>"; };
+		786E427627BB9E0A00EF525A /* ResumeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeEditorViewController.swift; sourceTree = "<group>"; };
+		786E427727BB9E0A00EF525A /* ResumeEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeEditorViewController.xib; sourceTree = "<group>"; };
+		786E428027BB9F8C00EF525A /* ResumeContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeContentViewController.swift; sourceTree = "<group>"; };
+		786E428127BB9F8C00EF525A /* ResumeContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeContentViewController.xib; sourceTree = "<group>"; };
 		78ACA73627B6C1B2007AC1D1 /* ResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +124,7 @@
 		786E422B27BB9AF300EF525A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				786E425B27BB9C9C00EF525A /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -99,6 +132,7 @@
 		786E422C27BB9B0300EF525A /* Resume */ = {
 			isa = PBXGroup;
 			children = (
+				786E427327BB9DEE00EF525A /* Editor */,
 				786E423327BB9B3C00EF525A /* Content */,
 				786E423227BB9B3200EF525A /* List */,
 			);
@@ -181,6 +215,8 @@
 		786E423527BB9B4100EF525A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				786E426F27BB9D2600EF525A /* ResumeListViewController.swift */,
+				786E427027BB9D2600EF525A /* ResumeListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +231,8 @@
 		786E423727BB9B4900EF525A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				786E428027BB9F8C00EF525A /* ResumeContentViewController.swift */,
+				786E428127BB9F8C00EF525A /* ResumeContentViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +467,12 @@
 		786E425627BB9BF500EF525A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				786E426327BB9CBF00EF525A /* Date.swift */,
+				786E426127BB9CBF00EF525A /* UIColor.swift */,
+				786E426027BB9CBF00EF525A /* UITableView.swift */,
+				786E426427BB9CBF00EF525A /* UITextView.swift */,
+				786E426527BB9CBF00EF525A /* UIView.swift */,
+				786E426227BB9CBF00EF525A /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -436,8 +480,36 @@
 		786E425727BB9BFC00EF525A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */,
+				786E425827BB9C9C00EF525A /* Nibbable.swift */,
+				786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		786E427327BB9DEE00EF525A /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				786E427527BB9DFE00EF525A /* View */,
+				786E427427BB9DF900EF525A /* ViewModel */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		786E427427BB9DF900EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E427527BB9DFE00EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E427627BB9E0A00EF525A /* ResumeEditorViewController.swift */,
+				786E427727BB9E0A00EF525A /* ResumeEditorViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		78ACA72D27B6C1B2007AC1D1 = {
@@ -606,6 +678,9 @@
 			files = (
 				78ACA74627B6C1B3007AC1D1 /* LaunchScreen.storyboard in Resources */,
 				78ACA74327B6C1B3007AC1D1 /* Assets.xcassets in Resources */,
+				786E427927BB9E0A00EF525A /* ResumeEditorViewController.xib in Resources */,
+				786E428327BB9F8C00EF525A /* ResumeContentViewController.xib in Resources */,
+				786E427227BB9D2600EF525A /* ResumeListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,8 +705,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786E425D27BB9C9C00EF525A /* DynamicHeightTableView.swift in Sources */,
+				786E426927BB9CBF00EF525A /* Date.swift in Sources */,
+				786E425E27BB9C9C00EF525A /* NibFileOwnerLoadable.swift in Sources */,
+				786E426A27BB9CBF00EF525A /* UITextView.swift in Sources */,
+				786E427127BB9D2600EF525A /* ResumeListViewController.swift in Sources */,
+				786E426B27BB9CBF00EF525A /* UIView.swift in Sources */,
+				786E426827BB9CBF00EF525A /* UIViewController.swift in Sources */,
+				786E425F27BB9C9C00EF525A /* CustomButton.swift in Sources */,
+				786E427827BB9E0A00EF525A /* ResumeEditorViewController.swift in Sources */,
 				78ACA73A27B6C1B2007AC1D1 /* AppDelegate.swift in Sources */,
+				786E425C27BB9C9C00EF525A /* Nibbable.swift in Sources */,
+				786E426727BB9CBF00EF525A /* UIColor.swift in Sources */,
+				786E428227BB9F8C00EF525A /* ResumeContentViewController.swift in Sources */,
 				78ACA73C27B6C1B2007AC1D1 /* SceneDelegate.swift in Sources */,
+				786E426627BB9CBF00EF525A /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

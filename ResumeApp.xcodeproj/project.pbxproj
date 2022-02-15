@@ -25,6 +25,9 @@
 		786E427927BB9E0A00EF525A /* ResumeEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E427727BB9E0A00EF525A /* ResumeEditorViewController.xib */; };
 		786E428227BB9F8C00EF525A /* ResumeContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E428027BB9F8C00EF525A /* ResumeContentViewController.swift */; };
 		786E428327BB9F8C00EF525A /* ResumeContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E428127BB9F8C00EF525A /* ResumeContentViewController.xib */; };
+		786E428627BB9FB500EF525A /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 786E428527BB9FB500EF525A /* Nimble */; };
+		786E428927BB9FBE00EF525A /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 786E428827BB9FBE00EF525A /* Quick */; };
+		786E428C27BB9FC700EF525A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 786E428B27BB9FC700EF525A /* IQKeyboardManagerSwift */; };
 		78ACA73A27B6C1B2007AC1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */; };
 		78ACA73C27B6C1B2007AC1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */; };
 		78ACA74327B6C1B3007AC1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78ACA74227B6C1B3007AC1D1 /* Assets.xcassets */; };
@@ -86,7 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786E428C27BB9FC700EF525A /* IQKeyboardManagerSwift in Frameworks */,
+				786E428627BB9FB500EF525A /* Nimble in Frameworks */,
 				7805814A27B6C23C0013F5A3 /* RealmSwift in Frameworks */,
+				786E428927BB9FBE00EF525A /* Quick in Frameworks */,
 				7805814827B6C23C0013F5A3 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +590,9 @@
 			packageProductDependencies = (
 				7805814727B6C23C0013F5A3 /* Realm */,
 				7805814927B6C23C0013F5A3 /* RealmSwift */,
+				786E428527BB9FB500EF525A /* Nimble */,
+				786E428827BB9FBE00EF525A /* Quick */,
+				786E428B27BB9FC700EF525A /* IQKeyboardManagerSwift */,
 			);
 			productName = ResumeApp;
 			productReference = 78ACA73627B6C1B2007AC1D1 /* ResumeApp.app */;
@@ -659,6 +668,9 @@
 			mainGroup = 78ACA72D27B6C1B2007AC1D1;
 			packageReferences = (
 				7805814627B6C23C0013F5A3 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				786E428427BB9FB500EF525A /* XCRemoteSwiftPackageReference "Nimble" */,
+				786E428727BB9FBE00EF525A /* XCRemoteSwiftPackageReference "Quick" */,
+				786E428A27BB9FC700EF525A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 78ACA73727B6C1B2007AC1D1 /* Products */;
 			projectDirPath = "";
@@ -1067,6 +1079,30 @@
 				kind = branch;
 			};
 		};
+		786E428427BB9FB500EF525A /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		786E428727BB9FBE00EF525A /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		786E428A27BB9FC700EF525A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1079,6 +1115,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7805814627B6C23C0013F5A3 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		786E428527BB9FB500EF525A /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 786E428427BB9FB500EF525A /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		786E428827BB9FBE00EF525A /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 786E428727BB9FBE00EF525A /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		786E428B27BB9FC700EF525A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 786E428A27BB9FC700EF525A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -111,6 +111,7 @@ final class EducationEditorViewModel: EducationEditorViewModelInput, EducationEd
             setStartYearDate(date: defaultValue.startYear)
             setEndYearDate(date: defaultValue.endYear)
             isUpdateEducationDetailItemHandler?(defaultValue)
+            setCGPA(text: defaultValue.cgpa)
         }
     }
     

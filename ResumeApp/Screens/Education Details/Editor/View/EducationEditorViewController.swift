@@ -88,7 +88,7 @@ final class EducationEditorViewController: UIViewController {
         // cgpa
         cgpaTextField.backgroundColor = .theme.background
         cgpaTextField.placeholder = "4.00"
-        cgpaTextField.keyboardType = .numberPad
+        cgpaTextField.keyboardType = .decimalPad
     }
     
     private func setupLabel() {
@@ -163,6 +163,7 @@ extension EducationEditorViewController {
             self?.gradeTextField.text = defaultValue.grade
             self?.updateDateLabel(label: self?.startDateLabel, date: defaultValue.startYear)
             self?.updateDateLabel(label: self?.endDateLabel, date: defaultValue.endYear)
+            self?.cgpaTextField.text = defaultValue.cgpa
         }
         
         viewModel.finishedWithEducationDetailItemHandler = { [weak self] isUpdate, educationDetailItem in

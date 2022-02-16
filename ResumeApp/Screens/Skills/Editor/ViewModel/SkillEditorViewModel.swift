@@ -10,10 +10,12 @@ import Foundation
 protocol SkillEditorViewModelOutput {
     var shouldEnableButtonHandler: ((Bool) -> Void)? { get }
     var isUpdateSkillHandler: ((String?) -> Void)? { get }
+    var finishedWithSkillHandler: ((Bool, String) -> Void)? { get }
 }
 
 protocol SkillEditorViewModelInput {
     func viewDidLoad()
+    func finish()
     func setSkill(text: String?)
 }
 
@@ -39,6 +41,7 @@ final class SkillEditorViewModel: SkillEditorViewModelInput, SkillEditorViewMode
     // MARK: - Output
     var shouldEnableButtonHandler: ((Bool) -> Void)?
     var isUpdateSkillHandler: ((String?) -> Void)?
+    var finishedWithSkillHandler: ((Bool, String) -> Void)?
     
     // MARK: - Input
     func setSkill(text: String?) {
@@ -56,4 +59,7 @@ final class SkillEditorViewModel: SkillEditorViewModelInput, SkillEditorViewMode
         }
     }
     
+    func finish() {
+        finishedWithSkillHandler?(isUpdate, skill)
+    }
 }

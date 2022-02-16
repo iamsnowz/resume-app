@@ -19,7 +19,7 @@ final class ProjectDetailEditorViewController: UIViewController {
     
     // MARK: - Properties
     private var viewModel: ProjectDetailEditorViewModel!
-    var finishHandler: ((Bool, ProjectDetailItem) -> Void)?
+    var finishedWithProjectDetailItemHandler: ((Bool, ProjectDetailItem) -> Void)?
     
     // MARK: - View lifecycle
     override func viewDidLoad() {
@@ -55,8 +55,7 @@ final class ProjectDetailEditorViewController: UIViewController {
     }
     
     @IBAction private func actionTapped() {
-        finishHandler?(viewModel.isUpdate, viewModel.projectDetaiLItem)
-        navigationController?.popViewController(animated: true)
+        viewModel.finish()
     }
     
     // MARK: - Setup
@@ -134,6 +133,11 @@ extension ProjectDetailEditorViewController {
             self?.projectSummaryTextView.text = defaultValue.projectSummary
             self?.technologyUsedTextView.text = defaultValue.technologyUsed
             self?.roleTextField.text = defaultValue.role
+        }
+        
+        viewModel.finishedWithProjectDetailItemHandler = { [weak self] isUpdate, projectDetailItem in
+            self?.finishedWithProjectDetailItemHandler?(isUpdate, projectDetailItem)
+            self?.navigationController?.popViewController(animated: true)
         }
     }
 }

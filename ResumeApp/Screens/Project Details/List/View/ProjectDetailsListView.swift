@@ -17,6 +17,7 @@ final class ProjectDetailsListView: UIView, NibFileOwnerLoadable {
     var contentView: UIView!
     private var viewModel: ProjectDetailsListViewModel!
     private var projectDetailEditorViewController: ProjectDetailEditorViewController?
+    var didUpdateProjectDetailItemsListHandler: (([ProjectDetailItem]) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,8 +57,13 @@ extension ProjectDetailsListView {
         viewModel = ProjectDetailsListViewModel()
         
         // output
-        viewModel.didUpdateProjectDetailItemsListHandler = { [weak self] in
+        
+        viewModel.listeningToTableViewReloadHandler = { [weak self] in
             self?.tableView.reloadData()
+        }
+        
+        viewModel.didUpdateProjectDetailItemsListHandler = { [weak self] projectDetailItemsList in
+            self?.didUpdateProjectDetailItemsListHandler?(projectDetailItemsList)
         }
         
         viewModel.didSelectProjectDetailItemHandler = { [weak self] (indexPath, selectedProjectDetailItem) in
@@ -77,7 +83,7 @@ extension ProjectDetailsListView {
     
     private func showProjectDetailEditorView(withSelectedProjetDetailItem selectedProjectDetailItem: ProjectDetailItem? = nil, at indexPath: IndexPath? = nil) {
         projectDetailEditorViewController = ProjectDetailEditorViewController.create(withDefaultValue: selectedProjectDetailItem)
-        projectDetailEditorViewController?.finishHandler = { [weak self] (isUpdate, projectDetailItem) in
+        projectDetailEditorViewController?.finishedWithProjectDetailItemHandler = { [weak self] (isUpdate, projectDetailItem) in
             self?.viewModel.updateProjectDetailItem(isUpdate: isUpdate, at: indexPath, projectDetailItem: projectDetailItem)
         }
         parentViewController?.navigationController?.pushViewController(projectDetailEditorViewController!, animated: true)

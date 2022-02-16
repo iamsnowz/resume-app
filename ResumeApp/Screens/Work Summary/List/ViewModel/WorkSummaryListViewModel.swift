@@ -13,7 +13,8 @@ enum WorkSummaryListSection {
 }
 
 protocol WorkSummaryListViewModelOutput {
-    var didUpdateWorkItemsListHandler: (() -> Void)? { get }
+    var didUpdateWorkItemsListHandler: (([WorkSummaryItem]) -> Void)? { get }
+    var listeningToTableViewReloadHandler: (() -> Void)? { get}
     var didSelectAddNewItem: (() -> Void)? { get }
     var didSelectWorkItemHandler: ((IndexPath, WorkSummaryItem) -> Void)? { get }
     
@@ -31,10 +32,16 @@ protocol WorkSummaryListViewModelInput {
 
 final class WorkSummaryListViewModel: WorkSummaryListViewModelInput, WorkSummaryListViewModelOutput {
     
-    private(set) var workItemsList: [WorkSummaryItem] = []
+    private var workItemsList: [WorkSummaryItem] = [] {
+        didSet {
+            didUpdateWorkItemsListHandler?(workItemsList)
+            listeningToTableViewReloadHandler?()
+        }
+    }
     
     // MARK: - Output
-    var didUpdateWorkItemsListHandler: (() -> Void)?
+    var didUpdateWorkItemsListHandler: (([WorkSummaryItem]) -> Void)?
+    var listeningToTableViewReloadHandler: (() -> Void)?
     var didSelectAddNewItem: (() -> Void)?
     var didSelectWorkItemHandler: ((IndexPath, WorkSummaryItem) -> Void)?
     
@@ -61,7 +68,6 @@ final class WorkSummaryListViewModel: WorkSummaryListViewModelInput, WorkSummary
         } else {
             workItemsList.append(workItem)
         }
-        didUpdateWorkItemsListHandler?()
     }
     
     func selectedWorkItem(at indexPath: IndexPath) {
@@ -76,7 +82,6 @@ final class WorkSummaryListViewModel: WorkSummaryListViewModelInput, WorkSummary
     func deleteWorkItem(at indexPath: IndexPath) {
         if !workItemsList.isEmpty {
             workItemsList.remove(at: indexPath.row)
-            didUpdateWorkItemsListHandler?()
         }
     }
     

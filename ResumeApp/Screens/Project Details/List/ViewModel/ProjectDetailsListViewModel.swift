@@ -13,7 +13,8 @@ enum ProjectDetailsListSection {
 }
 
 protocol ProjectDetailsListViewModelOutput {
-    var didUpdateProjectDetailItemsListHandler: (() -> Void)? { get }
+    var didUpdateProjectDetailItemsListHandler: (([ProjectDetailItem]) -> Void)? { get }
+    var listeningToTableViewReloadHandler: (() -> Void)? { get }
     var didSelectAddNewItem: (() -> Void)? { get }
     var didSelectProjectDetailItemHandler: ((IndexPath, ProjectDetailItem) -> Void)? { get }
     
@@ -31,10 +32,16 @@ protocol ProjectDetailsListViewModelInput {
 
 final class ProjectDetailsListViewModel: ProjectDetailsListViewModelInput, ProjectDetailsListViewModelOutput {
     
-    private(set) var projectDetailItemsList: [ProjectDetailItem] = []
+    private var projectDetailItemsList: [ProjectDetailItem] = [] {
+        didSet {
+            didUpdateProjectDetailItemsListHandler?(projectDetailItemsList)
+            listeningToTableViewReloadHandler?()
+        }
+    }
     
     // MARK: - Output
-    var didUpdateProjectDetailItemsListHandler: (() -> Void)?
+    var didUpdateProjectDetailItemsListHandler: (([ProjectDetailItem]) -> Void)?
+    var listeningToTableViewReloadHandler: (() -> Void)?
     var didSelectAddNewItem: (() -> Void)?
     var didSelectProjectDetailItemHandler: ((IndexPath, ProjectDetailItem) -> Void)?
     
@@ -61,7 +68,6 @@ final class ProjectDetailsListViewModel: ProjectDetailsListViewModelInput, Proje
         } else {
             projectDetailItemsList.append(projectDetailItem)
         }
-        didUpdateProjectDetailItemsListHandler?()
     }
     
     func selectedProjectDetailItem(at indexPath: IndexPath) {
@@ -76,7 +82,6 @@ final class ProjectDetailsListViewModel: ProjectDetailsListViewModelInput, Proje
     func deleteProjectItem(at indexPath: IndexPath) {
         if !projectDetailItemsList.isEmpty {
             projectDetailItemsList.remove(at: indexPath.row)
-            didUpdateProjectDetailItemsListHandler?()
         }
     }
 }

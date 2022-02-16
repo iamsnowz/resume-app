@@ -17,7 +17,7 @@ final class SkillEditorViewController: UIViewController {
     // MARK: - Properties
     /// finish handler will callback 2 data are
     /// isUpdate status and skill name as user input
-    var finishHandler: ((Bool, String) -> Void)?
+    var finishedWithSkillHandler: ((Bool, String) -> Void)?
     
     private var viewModel: SkillEditorViewModel!
     
@@ -45,8 +45,7 @@ final class SkillEditorViewController: UIViewController {
     }
     
     @IBAction private func actionTapped() {
-        finishHandler?(viewModel.isUpdate, viewModel.skill)
-        navigationController?.popViewController(animated: true)
+        viewModel.finish()
     }
     
     // MARK: - Setup
@@ -82,6 +81,7 @@ extension SkillEditorViewController {
     private func bindingViewModel() {
         
         // output
+        
         viewModel.isUpdateSkillHandler = { [weak self] (defaultValue) in
             self?.title = "Updating skill"
             self?.setupActionButton(title: "Update")
@@ -90,6 +90,11 @@ extension SkillEditorViewController {
         
         viewModel.shouldEnableButtonHandler = { [weak self] isEnabled in
             self?.actionButton.isEnabled = isEnabled
+        }
+        
+        viewModel.finishedWithSkillHandler = { [weak self] isUpdate, skill in
+            self?.finishedWithSkillHandler?(isUpdate, skill)
+            self?.navigationController?.popViewController(animated: true)
         }
     }
 }

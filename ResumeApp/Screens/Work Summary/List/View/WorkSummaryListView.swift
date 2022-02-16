@@ -17,6 +17,7 @@ final class WorkSummaryListView: UIView, NibFileOwnerLoadable {
     var contentView: UIView!
     private var viewModel: WorkSummaryListViewModel!
     private var workSummaryEditorViewController: WorkSummaryEditorViewController?
+    var didUpdateWorkItemsListHandler: (([WorkSummaryItem]) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,8 +57,12 @@ extension WorkSummaryListView {
         viewModel = WorkSummaryListViewModel()
         
         // output
-        viewModel.didUpdateWorkItemsListHandler = { [weak self] in
+        viewModel.listeningToTableViewReloadHandler = { [weak self] in
             self?.tableView.reloadData()
+        }
+        
+        viewModel.didUpdateWorkItemsListHandler = { [weak self] workSummaryItemsList in
+            self?.didUpdateWorkItemsListHandler?(workSummaryItemsList)
         }
         
         viewModel.didSelectWorkItemHandler = { [weak self] (indexPath, selectedWorkItem) in

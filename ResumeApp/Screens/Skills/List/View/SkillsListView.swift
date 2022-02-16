@@ -17,6 +17,7 @@ final class SkillsListView: UIView, NibFileOwnerLoadable {
     var contentView: UIView!
     private var viewModel: SkillsListViewModel!
     private var skillEditorViewController: SkillEditorViewController?
+    var didUpdateSkillsListHandler: (([String]) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,8 +57,13 @@ extension SkillsListView {
         viewModel = SkillsListViewModel()
         
         // output
-        viewModel.didUpdateSkillsListHandler = { [weak self] in
+        
+        viewModel.listeningToTableViewReloadHandler = { [weak self] in
             self?.tableView.reloadData()
+        }
+        
+        viewModel.didUpdateSkillsListHandler = { [weak self] skillsList in
+            self?.didUpdateSkillsListHandler?(skillsList)
         }
         
         viewModel.didSelectSkillHandler = { [weak self] (indexPath, selectedSkill) in
@@ -77,7 +83,7 @@ extension SkillsListView {
     
     private func showSkillEditorView(withSelectedSkill selectedSkill: String? = nil, at indexPath: IndexPath? = nil) {
         skillEditorViewController = SkillEditorViewController.create(withDefaultValue: selectedSkill)
-        skillEditorViewController?.finishHandler = { [weak self] (isUpdate, skill) in
+        skillEditorViewController?.finishedWithSkillHandler = { [weak self] (isUpdate, skill) in
             self?.viewModel.updateSkill(isUpdate: isUpdate, at: indexPath, text: skill)
         }
         parentViewController?.navigationController?.pushViewController(skillEditorViewController!, animated: true)

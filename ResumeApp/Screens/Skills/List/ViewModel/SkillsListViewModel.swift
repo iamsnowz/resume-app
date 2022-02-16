@@ -13,7 +13,8 @@ enum SkillsListSection {
 }
 
 protocol SkillsListViewModelOutput {
-    var didUpdateSkillsListHandler: (() -> Void)? { get }
+    var didUpdateSkillsListHandler: (([String]) -> Void)? { get }
+    var listeningToTableViewReloadHandler: (() -> Void)? { get }
     var didSelectAddNewItem: (() -> Void)? { get }
     var didSelectSkillHandler: ((IndexPath, String) -> Void)? { get }
     
@@ -31,10 +32,16 @@ protocol SkillsListViewModellInput {
 
 final class SkillsListViewModel: SkillsListViewModellInput, SkillsListViewModelOutput {
     
-    private(set) var skillsList: [String] = []
+    private var skillsList: [String] = [] {
+        didSet {
+            didUpdateSkillsListHandler?(skillsList)
+            listeningToTableViewReloadHandler?()
+        }
+    }
     
     // MARK: - Output
-    var didUpdateSkillsListHandler: (() -> Void)?
+    var didUpdateSkillsListHandler: (([String]) -> Void)?
+    var listeningToTableViewReloadHandler: (() -> Void)?
     var didSelectAddNewItem: (() -> Void)?
     var didSelectSkillHandler: ((IndexPath, String) -> Void)?
     
@@ -61,8 +68,6 @@ final class SkillsListViewModel: SkillsListViewModellInput, SkillsListViewModelO
         } else {
             skillsList.append(text)
         }
-        
-        didUpdateSkillsListHandler?()
     }
     
     func selectedSkill(at indexPath: IndexPath) {
@@ -76,6 +81,5 @@ final class SkillsListViewModel: SkillsListViewModellInput, SkillsListViewModelO
     
     func deleteSkill(at indexPath: IndexPath) {
         skillsList.remove(at: indexPath.row)
-        didUpdateSkillsListHandler?()
     }
 }

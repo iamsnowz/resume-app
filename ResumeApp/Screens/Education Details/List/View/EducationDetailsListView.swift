@@ -17,6 +17,7 @@ final class EducationDetailsListView: UIView, NibFileOwnerLoadable {
     var contentView: UIView!
     private var viewModel: EducationDetailsListViewModel!
     private var educationEditorViewController: EducationEditorViewController?
+    var didUpdateEducationDetailItemsListHandler: (([EducationDetailItem]) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,8 +57,12 @@ extension EducationDetailsListView {
         viewModel = EducationDetailsListViewModel()
         
         // output
-        viewModel.didUpdateEducationDetailItemsListHandler = { [weak self] in
+        viewModel.listeningToTableViewReloadHandler = { [weak self] in
             self?.tableView.reloadData()
+        }
+        
+        viewModel.didUpdateEducationDetailItemsListHandler = { [weak self] educationDetailItemsList in
+            self?.didUpdateEducationDetailItemsListHandler?(educationDetailItemsList)
         }
         
         viewModel.didSelectEducationDetailItemHandler = { [weak self] (indexPath, selectedEducationDetail) in

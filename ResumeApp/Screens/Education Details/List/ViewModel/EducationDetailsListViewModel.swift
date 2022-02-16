@@ -13,7 +13,8 @@ enum EducationDetailsListSection {
 }
 
 protocol EducationDetailsListViewModelOutput {
-    var didUpdateEducationDetailItemsListHandler: (() -> Void)? { get }
+    var didUpdateEducationDetailItemsListHandler: (([EducationDetailItem]) -> Void)? { get }
+    var listeningToTableViewReloadHandler: (() -> Void)? { get }
     var didSelectAddNewItem: (() -> Void)? { get }
     var didSelectEducationDetailItemHandler: ((IndexPath, EducationDetailItem) -> Void)? { get }
     
@@ -31,10 +32,16 @@ protocol EducationDetailsListViewModelInput {
 
 final class EducationDetailsListViewModel: EducationDetailsListViewModelInput, EducationDetailsListViewModelOutput {
     
-    private(set) var educationDetailsItemList: [EducationDetailItem] = []
+    private var educationDetailsItemList: [EducationDetailItem] = [] {
+        didSet {
+            didUpdateEducationDetailItemsListHandler?(educationDetailsItemList)
+            listeningToTableViewReloadHandler?()
+        }
+    }
     
     // MARK: - Output
-    var didUpdateEducationDetailItemsListHandler: (() -> Void)?
+    var didUpdateEducationDetailItemsListHandler: (([EducationDetailItem]) -> Void)?
+    var listeningToTableViewReloadHandler: (() -> Void)?
     var didSelectAddNewItem: (() -> Void)?
     var didSelectEducationDetailItemHandler: ((IndexPath, EducationDetailItem) -> Void)?
     
@@ -66,7 +73,6 @@ final class EducationDetailsListViewModel: EducationDetailsListViewModelInput, E
         } else {
             educationDetailsItemList.append(educationDetailItem)
         }
-        didUpdateEducationDetailItemsListHandler?()
     }
     
     func selectedEducationDetailItem(at indexPath: IndexPath) {
@@ -81,7 +87,6 @@ final class EducationDetailsListViewModel: EducationDetailsListViewModelInput, E
     func deleteEducationDetailItem(at indexPath: IndexPath) {
         if !educationDetailsItemList.isEmpty {
             educationDetailsItemList.remove(at: indexPath.row)
-            didUpdateEducationDetailItemsListHandler?()
         }
     }
 }

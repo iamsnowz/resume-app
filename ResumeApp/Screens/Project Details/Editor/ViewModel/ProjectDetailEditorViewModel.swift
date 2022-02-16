@@ -10,10 +10,12 @@ import UIKit
 protocol ProjectDetailEditorViewModelOutput {
     var shouldEnableButtonHandler: ((Bool) -> Void)? { get }
     var isUpdateProjectDetailHandler: ((ProjectDetailItem) -> Void)? { get }
+    var finishedWithProjectDetailItemHandler: ((Bool, ProjectDetailItem) -> Void)? { get }
 }
 
 protocol ProjectDetailEditorViewModelInput {
     func viewDidLoad()
+    func finish()
     func setProjectName(text: String?)
     func setTeamSize(text: String?)
     func setProjectSummary(text: String?)
@@ -30,14 +32,6 @@ final class ProjectDetailEditorViewModel: ProjectDetailEditorViewModelInput, Pro
     }
     
     private(set) var isUpdate: Bool = false
-    
-    var projectDetaiLItem: ProjectDetailItem {
-        return ProjectDetailItem(projectName: projectName,
-                                 teamSize: teamSize,
-                                 projectSummary: projectSummary,
-                                 technologyUsed: technologyUsed,
-                                 role: role)
-    }
     
     private var projectName: String = "" {
         didSet {
@@ -77,6 +71,7 @@ final class ProjectDetailEditorViewModel: ProjectDetailEditorViewModelInput, Pro
     // MARK: - Output
     var shouldEnableButtonHandler: ((Bool) -> Void)?
     var isUpdateProjectDetailHandler: ((ProjectDetailItem) -> Void)?
+    var finishedWithProjectDetailItemHandler: ((Bool, ProjectDetailItem) -> Void)?
     
     // MARK: - Input
     func setProjectName(text: String?) {
@@ -124,5 +119,14 @@ final class ProjectDetailEditorViewModel: ProjectDetailEditorViewModelInput, Pro
             setRole(text: defaultValue.projectName)
             isUpdateProjectDetailHandler?(defaultValue)
         }
+    }
+    
+    func finish() {
+        let projectDetailItem = ProjectDetailItem(projectName: projectName,
+                                 teamSize: teamSize,
+                                 projectSummary: projectSummary,
+                                 technologyUsed: technologyUsed,
+                                 role: role)
+        finishedWithProjectDetailItemHandler?(isUpdate, projectDetailItem)
     }
 }

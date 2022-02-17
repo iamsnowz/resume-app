@@ -93,13 +93,21 @@
 		78A5104427BD611E00DCF489 /* EducationDetailContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5104227BD611E00DCF489 /* EducationDetailContentTableViewCell.xib */; };
 		78A5104727BD612800DCF489 /* ProjectDetailContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5104527BD612800DCF489 /* ProjectDetailContentTableViewCell.swift */; };
 		78A5104827BD612800DCF489 /* ProjectDetailContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5104627BD612800DCF489 /* ProjectDetailContentTableViewCell.xib */; };
+		78A5104A27BDE8EA00DCF489 /* SkillEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5104927BDE8EA00DCF489 /* SkillEditorSpec.swift */; };
 		78ACA73A27B6C1B2007AC1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */; };
 		78ACA73C27B6C1B2007AC1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */; };
 		78ACA74327B6C1B3007AC1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78ACA74227B6C1B3007AC1D1 /* Assets.xcassets */; };
 		78ACA74627B6C1B3007AC1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78ACA74427B6C1B3007AC1D1 /* LaunchScreen.storyboard */; };
-		78ACA75127B6C1B3007AC1D1 /* ResumeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA75027B6C1B3007AC1D1 /* ResumeAppTests.swift */; };
 		78ACA75B27B6C1B3007AC1D1 /* ResumeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA75A27B6C1B3007AC1D1 /* ResumeAppUITests.swift */; };
 		78ACA75D27B6C1B3007AC1D1 /* ResumeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA75C27B6C1B3007AC1D1 /* ResumeAppUITestsLaunchTests.swift */; };
+		78B5E43627BE1026006280D2 /* ProjectDetailEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43527BE1026006280D2 /* ProjectDetailEditorSpec.swift */; };
+		78B5E43A27BE16B4006280D2 /* EducationDetailEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43927BE16B4006280D2 /* EducationDetailEditorSpec.swift */; };
+		78B5E43C27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43B27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift */; };
+		78B5E44027BE305A006280D2 /* ResumeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43F27BE305A006280D2 /* ResumeContentSpec.swift */; };
+		78B5E44227BE3087006280D2 /* ResumeEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E44127BE3087006280D2 /* ResumeEditorSpec.swift */; };
+		78B5E44627BE321D006280D2 /* ResumeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E44527BE321D006280D2 /* ResumeMock.swift */; };
+		78B5E44827BE35DA006280D2 /* ResumeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */; };
+		78F8D34427BE426900EF346C /* WorkSummaryListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8D34327BE426900EF346C /* WorkSummaryListSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +209,7 @@
 		78A5104227BD611E00DCF489 /* EducationDetailContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationDetailContentTableViewCell.xib; sourceTree = "<group>"; };
 		78A5104527BD612800DCF489 /* ProjectDetailContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailContentTableViewCell.swift; sourceTree = "<group>"; };
 		78A5104627BD612800DCF489 /* ProjectDetailContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailContentTableViewCell.xib; sourceTree = "<group>"; };
+		78A5104927BDE8EA00DCF489 /* SkillEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillEditorSpec.swift; sourceTree = "<group>"; };
 		78ACA73627B6C1B2007AC1D1 /* ResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,10 +217,17 @@
 		78ACA74527B6C1B3007AC1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78ACA74727B6C1B3007AC1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78ACA74C27B6C1B3007AC1D1 /* ResumeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResumeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78ACA75027B6C1B3007AC1D1 /* ResumeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppTests.swift; sourceTree = "<group>"; };
 		78ACA75627B6C1B3007AC1D1 /* ResumeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResumeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ACA75A27B6C1B3007AC1D1 /* ResumeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppUITests.swift; sourceTree = "<group>"; };
 		78ACA75C27B6C1B3007AC1D1 /* ResumeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78B5E43527BE1026006280D2 /* ProjectDetailEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E43927BE16B4006280D2 /* EducationDetailEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E43B27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E43F27BE305A006280D2 /* ResumeContentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeContentSpec.swift; sourceTree = "<group>"; };
+		78B5E44127BE3087006280D2 /* ResumeEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E44527BE321D006280D2 /* ResumeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeMock.swift; sourceTree = "<group>"; };
+		78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServiceMock.swift; sourceTree = "<group>"; };
+		78F8D34327BE426900EF346C /* WorkSummaryListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryListSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -928,7 +944,15 @@
 		78ACA74F27B6C1B3007AC1D1 /* ResumeAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				78ACA75027B6C1B3007AC1D1 /* ResumeAppTests.swift */,
+				78A5104927BDE8EA00DCF489 /* SkillEditorSpec.swift */,
+				78B5E43527BE1026006280D2 /* ProjectDetailEditorSpec.swift */,
+				78B5E43927BE16B4006280D2 /* EducationDetailEditorSpec.swift */,
+				78B5E43B27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift */,
+				78B5E44127BE3087006280D2 /* ResumeEditorSpec.swift */,
+				78B5E43F27BE305A006280D2 /* ResumeContentSpec.swift */,
+				78F8D34327BE426900EF346C /* WorkSummaryListSpec.swift */,
+				78B5E44527BE321D006280D2 /* ResumeMock.swift */,
+				78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */,
 			);
 			path = ResumeAppTests;
 			sourceTree = "<group>";
@@ -1175,7 +1199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78ACA75127B6C1B3007AC1D1 /* ResumeAppTests.swift in Sources */,
+				78F8D34427BE426900EF346C /* WorkSummaryListSpec.swift in Sources */,
+				78B5E44027BE305A006280D2 /* ResumeContentSpec.swift in Sources */,
+				78B5E43627BE1026006280D2 /* ProjectDetailEditorSpec.swift in Sources */,
+				78B5E43C27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift in Sources */,
+				78A5104A27BDE8EA00DCF489 /* SkillEditorSpec.swift in Sources */,
+				78B5E44227BE3087006280D2 /* ResumeEditorSpec.swift in Sources */,
+				78B5E44627BE321D006280D2 /* ResumeMock.swift in Sources */,
+				78B5E44827BE35DA006280D2 /* ResumeServiceMock.swift in Sources */,
+				78B5E43A27BE16B4006280D2 /* EducationDetailEditorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

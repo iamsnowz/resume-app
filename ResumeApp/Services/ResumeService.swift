@@ -55,6 +55,7 @@ final class ResumeService: ResumeServiceProtocol {
     func getResumeList(completion: ((Result<Results<ResumeObject>, ServiceError>) -> Void)?) {
         notificationToken?.invalidate()
         let objects = RealmService.shared.realm.objects(ResumeObject.self)
+        completion?(.failure(.notFoundData))
         notificationToken = objects.observe { change in
             completion?(.success(objects))
         }

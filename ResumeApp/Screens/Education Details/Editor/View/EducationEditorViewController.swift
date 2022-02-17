@@ -123,7 +123,7 @@ final class EducationEditorViewController: UIViewController {
     // MARK: - Update
     func updateDateLabel(label: UILabel?, date: Date) {
         label?.text = date.asDateStringWithMMMYYYY()
-        label?.textColor =  UIColor(named: "LabeLColor")
+        label?.textColor =  UIColor(named: "LabelColor")
     }
 }
 
@@ -158,7 +158,7 @@ extension EducationEditorViewController {
         }
         
         viewModel.isUpdateEducationDetailItemHandler = { [weak self] defaultValue in
-            self?.title = "Updating work summary"
+            self?.title = "Updating education detail"
             self?.setupActionButton(title: "Update")
             self?.gradeTextField.text = defaultValue.grade
             self?.updateDateLabel(label: self?.startDateLabel, date: defaultValue.startYear)

@@ -28,7 +28,6 @@ protocol EducationEditorViewModelInput {
 
 final class EducationEditorViewModel: EducationEditorViewModelInput, EducationEditorViewModelOutput {
 
-    
     private var defaultValue: EducationDetailItem?
     
     init(defaultValue: EducationDetailItem?) {
@@ -110,8 +109,8 @@ final class EducationEditorViewModel: EducationEditorViewModelInput, EducationEd
             setGrade(text: defaultValue.grade)
             setStartYearDate(date: defaultValue.startYear)
             setEndYearDate(date: defaultValue.endYear)
-            isUpdateEducationDetailItemHandler?(defaultValue)
             setCGPA(text: defaultValue.cgpa)
+            isUpdateEducationDetailItemHandler?(defaultValue)
         }
     }
     

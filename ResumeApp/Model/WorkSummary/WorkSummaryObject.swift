@@ -15,8 +15,10 @@ class WorkSummaryObject: Object {
     @Persisted var endDate = Date()
 }
 
-class WorkSummarySerializer {
-    func serializeWith(resumeId: String, workSummary: [WorkSummaryItem]) {
+
+class WorkSummaryObjectManager {
+    func createOrUpdate(resumeId: String, workSummary: [WorkSummaryItem]) {
+        delete(withId: resumeId)
         for item in workSummary {
             let workSummaryObject = WorkSummaryObject()
             workSummaryObject.resumeId = resumeId
@@ -24,6 +26,13 @@ class WorkSummarySerializer {
             workSummaryObject.startDate = item.startDate
             workSummaryObject.endDate = item.endDate
             RealmService.shared.saveObjects(objs: workSummaryObject)
+        }
+    }
+    
+    func delete(withId id: String) {
+        let workSummary = RealmService.shared.realm.objects(WorkSummaryObject.self).where { $0.resumeId == id }
+        for object in workSummary {
+            RealmService.shared.deleteObjects(objs: object)
         }
     }
 }

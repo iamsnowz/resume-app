@@ -25,22 +25,26 @@ class ResumeObject: Object {
     @Persisted var totalYearsOfExperience = ""
 }
 
-class ResumeSerializer {
-    
-    func serializedObjectWith(resumeId: String, resumeItem: ResumeItem) {
+class ResumeObjectManager {
+    func createOrUpdate(resumeItem: ResumeItem) {
+        delete(withId: resumeItem.id)
         let resumeObject = ResumeObject()
-        resumeObject.id = resumeId
-        resumeObject.profileImageData = resumeItem.profileImageData
-        resumeObject.resumeTitle = resumeItem.resumeTitle
-        resumeObject.firstname = resumeItem.firstname
-        resumeObject.lastname = resumeItem.lastname
-        resumeObject.mobileNumber = resumeItem.mobileNumber
-        resumeObject.emailAddress = resumeItem.emailAddress
-        resumeObject.residenceAddress = resumeItem.residenceAddress
-        resumeObject.careerObjective = resumeItem.careerObjective
-        resumeObject.totalYearsOfExperience = resumeItem.totalYearsOfExperience
+        resumeObject.id = resumeItem.id
+        resumeObject.profileImageData = resumeItem.personalDetail.profileImageData
+        resumeObject.resumeTitle = resumeItem.personalDetail.resumeTitle
+        resumeObject.firstname = resumeItem.personalDetail.firstname
+        resumeObject.lastname = resumeItem.personalDetail.lastname
+        resumeObject.mobileNumber = resumeItem.personalDetail.mobileNumber
+        resumeObject.emailAddress = resumeItem.personalDetail.emailAddress
+        resumeObject.residenceAddress = resumeItem.personalDetail.residenceAddress
+        resumeObject.careerObjective = resumeItem.personalDetail.careerObjective
+        resumeObject.totalYearsOfExperience = resumeItem.personalDetail.totalYearsOfExperience
         RealmService.shared.saveObjects(objs: resumeObject)
     }
+
+    func delete(withId id: String) {
+        if let resume = RealmService.shared.realm.object(ofType: ResumeObject.self, forPrimaryKey: id) {
+            RealmService.shared.deleteObjects(objs: resume)
+        }
+    }
 }
-
-

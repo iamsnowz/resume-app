@@ -29,3 +29,26 @@ class EducationDetailSerializer {
         }
     }
 }
+
+class EducationDetailObjectManager {
+    func createOrUpdate(resumeId: String, educationDetail: [EducationDetailItem]) {
+        delete(withId: resumeId)
+        for item in educationDetail {
+            let educationObject = EducationDetailObject()
+            educationObject.resumeId = resumeId
+            educationObject.grade = item.grade
+            educationObject.startYearDate = item.startYear
+            educationObject.endYearDate = item.endYear
+            educationObject.cgpa = item.cgpa
+            RealmService.shared.saveObjects(objs: educationObject)
+        }
+    }
+    
+    func delete(withId id: String) {
+        let educationObject = RealmService.shared.realm.objects(EducationDetailObject.self).where { $0.resumeId == id }
+        for object in educationObject {
+            RealmService.shared.deleteObjects(objs: object)
+        }
+    }
+}
+

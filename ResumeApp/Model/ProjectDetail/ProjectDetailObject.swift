@@ -17,8 +17,10 @@ class ProjectDetailObject: Object {
     @Persisted var role = ""
     
 }
-class ProjectDetailSerializer {
-    func serializeWith(resumeId: String, projectDetail: [ProjectDetailItem]) {
+
+class ProjectDetailObjectManager {
+    func createOrUpdate(resumeId: String, projectDetail: [ProjectDetailItem]) {
+        delete(withId: resumeId)
         for item in projectDetail {
             let projectDetailObject = ProjectDetailObject()
             projectDetailObject.resumeId = resumeId
@@ -27,8 +29,14 @@ class ProjectDetailSerializer {
             projectDetailObject.projectSummary = item.projectSummary
             projectDetailObject.technologyUsed = item.technologyUsed
             projectDetailObject.role = item.role
-            
             RealmService.shared.saveObjects(objs: projectDetailObject)
+        }
+    }
+    
+    func delete(withId id: String) {
+        let projectDetailObject = RealmService.shared.realm.objects(ProjectDetailObject.self).where { $0.resumeId == id }
+        for object in projectDetailObject {
+            RealmService.shared.deleteObjects(objs: object)
         }
     }
 }

@@ -25,17 +25,6 @@ class RealmService {
         }
     }
     
-    // Update the obect
-    func updateObjects(objs: Object) {
-        do {
-            try realm.write {
-                realm.add(objs, update: .all)
-            }
-        } catch {
-            print("Could not update to database: ", error)
-        }
-    }
-    
     // Delete particular object from realm database
     func deleteObjects(objs: Object) {
         do {

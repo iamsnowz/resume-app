@@ -35,7 +35,7 @@ final class ResumeEditorViewModel: ResumeEditorViewModelInput, ResumeEditorViewM
     
     private var isUpdate: Bool = false
     
-    private var personalDetail: PersonalDetailItem? {
+    private var personalDetail: PersonalDetailItem! {
         didSet {
             evaluateData()
         }
@@ -116,9 +116,6 @@ final class ResumeEditorViewModel: ResumeEditorViewModelInput, ResumeEditorViewM
     }
     
     func createOrUpdate() {
-        guard let personalDetail = personalDetail else {
-            return
-        }
         if isUpdate, let defaultValue = defaultValue {
             let resumeItem = ResumeItem(id: defaultValue.id,
                                         personalDetail: personalDetail,

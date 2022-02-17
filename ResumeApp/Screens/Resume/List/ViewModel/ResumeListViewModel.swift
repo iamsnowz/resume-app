@@ -60,7 +60,7 @@ final class ResumeListViewModel: ResumeListViewModelInput, ResumeListViewModelOu
     }
     
     func fetchResumeList() {
-        service.getResumeList { [weak self] result in
+        service.observe { [weak self] result in
             switch result {
             case .success(let results):
                 self?.prepareData(results: results)

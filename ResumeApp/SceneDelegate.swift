@@ -6,17 +6,46 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+
+        // Configuration Realm
+        var config = Realm.Configuration(
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 1,
+
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            migrationBlock: { migration, oldSchemaVersion in
+                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                if (oldSchemaVersion < 1) {
+                    // Nothing to do!
+                    // Realm will automatically detect new properties and removed properties
+                    // And will update the schema on disk automatically
+                }
+            })
+
+        // Tell Realm to use this new configuration object for the default Realm
+        config.fileURL = config.fileURL?.deletingLastPathComponent().appendingPathComponent("resume.realm")
+        Realm.Configuration.defaultConfiguration = config
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        
+        guard let scene = (scene as? UIWindowScene) else { return }
+        let rootViewController = ResumeListViewController.create()
+        let window = UIWindow(windowScene: scene)
+        window.rootViewController = UINavigationController(rootViewController: rootViewController)
+        window.makeKeyAndVisible()
+        self.window = window
+        
+        IQKeyboardManager.shared.enable = true
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

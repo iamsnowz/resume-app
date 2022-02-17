@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumeEditorViewController" customModule="ResumeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="4Qv-dY-RrS" id="Btg-1J-1y3"/>
+                <outlet property="educationDetailsListView" destination="ONM-YM-qG6" id="8bQ-02-sbd"/>
+                <outlet property="personalDetailsView" destination="bMp-rb-tyc" id="cH4-Yn-URe"/>
+                <outlet property="projectDetailsListView" destination="q3K-vo-6H5" id="VTm-Jf-a3h"/>
+                <outlet property="skillsListView" destination="dlY-gd-DjI" id="R14-R1-Tvn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="workSummaryListView" destination="aW9-5V-ppn" id="C1J-Ov-Tna"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1378"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTW-ZA-HuB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1352"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fFc-fe-gfM">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cXI-cg-cjw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-rb-tyc" customClass="PersonalDetailsView" customModule="ResumeApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bMp-rb-tyc" firstAttribute="leading" secondItem="cXI-cg-cjw" secondAttribute="leading" id="UNB-qD-zjH"/>
+                                        <constraint firstAttribute="trailing" secondItem="bMp-rb-tyc" secondAttribute="trailing" id="qhx-Me-Hp1"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Jv-zs-pvb" userLabel="Work Summary">
+                                    <rect key="frame" x="0.0" y="144" width="414" height="75"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdB-Gt-TlD">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-5V-ppn" customClass="WorkSummaryListView" customModule="ResumeApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="25" width="414" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jdB-Gt-TlD" firstAttribute="leading" secondItem="0Jv-zs-pvb" secondAttribute="leading" constant="8" id="SaI-Ip-eTI"/>
+                                        <constraint firstItem="aW9-5V-ppn" firstAttribute="leading" secondItem="0Jv-zs-pvb" secondAttribute="leading" id="VUp-2a-WU8"/>
+                                        <constraint firstAttribute="trailing" secondItem="jdB-Gt-TlD" secondAttribute="trailing" constant="8" id="nO6-Jf-dLo"/>
+                                        <constraint firstAttribute="trailing" secondItem="aW9-5V-ppn" secondAttribute="trailing" id="r5e-df-urS"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rj4-gX-d1y" userLabel="Skills">
+                                    <rect key="frame" x="0.0" y="235" width="414" height="75"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIo-8R-K9T">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlY-gd-DjI" customClass="SkillsListView" customModule="ResumeApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="25" width="414" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bIo-8R-K9T" firstAttribute="leading" secondItem="Rj4-gX-d1y" secondAttribute="leading" constant="8" id="1vR-5p-kBF"/>
+                                        <constraint firstItem="dlY-gd-DjI" firstAttribute="leading" secondItem="Rj4-gX-d1y" secondAttribute="leading" id="A7R-1h-jUe"/>
+                                        <constraint firstAttribute="trailing" secondItem="dlY-gd-DjI" secondAttribute="trailing" id="e8v-b7-LM3"/>
+                                        <constraint firstAttribute="trailing" secondItem="bIo-8R-K9T" secondAttribute="trailing" constant="8" id="eFX-KV-qc3"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FJe-io-uKu" userLabel="Education Details">
+                                    <rect key="frame" x="0.0" y="326" width="414" height="75"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b44-hH-P1b">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONM-YM-qG6" customClass="EducationDetailsListView" customModule="ResumeApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="25" width="414" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ONM-YM-qG6" firstAttribute="leading" secondItem="FJe-io-uKu" secondAttribute="leading" id="2Qp-0C-2qF"/>
+                                        <constraint firstItem="b44-hH-P1b" firstAttribute="leading" secondItem="FJe-io-uKu" secondAttribute="leading" constant="8" id="Yqq-lG-rCx"/>
+                                        <constraint firstAttribute="trailing" secondItem="b44-hH-P1b" secondAttribute="trailing" constant="8" id="b2k-9y-4Do"/>
+                                        <constraint firstAttribute="trailing" secondItem="ONM-YM-qG6" secondAttribute="trailing" id="rqO-Ic-JzN"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nn0-lG-Odo" userLabel="Project Details">
+                                    <rect key="frame" x="0.0" y="417" width="414" height="75"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYt-Ew-eK4">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-vo-6H5" customClass="ProjectDetailsListView" customModule="ResumeApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="25" width="414" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AYt-Ew-eK4" firstAttribute="leading" secondItem="nn0-lG-Odo" secondAttribute="leading" constant="8" id="2p7-dF-7bH"/>
+                                        <constraint firstAttribute="trailing" secondItem="q3K-vo-6H5" secondAttribute="trailing" id="ZeL-00-Ztk"/>
+                                        <constraint firstItem="q3K-vo-6H5" firstAttribute="leading" secondItem="nn0-lG-Odo" secondAttribute="leading" id="kec-5a-jAD"/>
+                                        <constraint firstAttribute="trailing" secondItem="AYt-Ew-eK4" secondAttribute="trailing" constant="8" id="vzD-Fe-9PB"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qv-dY-RrS" customClass="CustomButton" customModule="ResumeApp" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="508" width="382" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="B3c-pQ-5bH"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="createTapped" destination="-1" eventType="touchUpInside" id="0eh-nv-9Rm"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="4Qv-dY-RrS" secondAttribute="trailing" constant="16" id="19a-RZ-r8a"/>
+                                <constraint firstAttribute="trailing" secondItem="0Jv-zs-pvb" secondAttribute="trailing" id="6JG-4F-erd"/>
+                                <constraint firstItem="cXI-cg-cjw" firstAttribute="leading" secondItem="fFc-fe-gfM" secondAttribute="leading" id="7PY-RW-mYG"/>
+                                <constraint firstItem="nn0-lG-Odo" firstAttribute="leading" secondItem="fFc-fe-gfM" secondAttribute="leading" id="B6i-m3-zDv"/>
+                                <constraint firstItem="0Jv-zs-pvb" firstAttribute="leading" secondItem="fFc-fe-gfM" secondAttribute="leading" id="JuA-Hc-2g8"/>
+                                <constraint firstItem="Rj4-gX-d1y" firstAttribute="leading" secondItem="fFc-fe-gfM" secondAttribute="leading" id="Tdf-Bh-8Jj"/>
+                                <constraint firstItem="FJe-io-uKu" firstAttribute="leading" secondItem="fFc-fe-gfM" secondAttribute="leading" id="Us4-Wz-kcX"/>
+                                <constraint firstAttribute="trailing" secondItem="Rj4-gX-d1y" secondAttribute="trailing" id="YZW-jw-YO4"/>
+                                <constraint firstAttribute="trailing" secondItem="nn0-lG-Odo" secondAttribute="trailing" id="ZME-WY-hJK"/>
+                                <constraint firstAttribute="trailing" secondItem="cXI-cg-cjw" secondAttribute="trailing" id="aNh-W4-mXs"/>
+                                <constraint firstAttribute="trailing" secondItem="FJe-io-uKu" secondAttribute="trailing" id="l1M-Iz-moQ"/>
+                                <constraint firstItem="4Qv-dY-RrS" firstAttribute="leading" secondItem="fFc-fe-gfM" secondAttribute="leading" constant="16" id="mj3-oY-Zkp"/>
+                                <constraint firstItem="0Jv-zs-pvb" firstAttribute="leading" secondItem="fFc-fe-gfM" secondAttribute="leading" id="msx-gQ-VnF"/>
+                                <constraint firstAttribute="trailing" secondItem="0Jv-zs-pvb" secondAttribute="trailing" id="v3i-gT-6rb"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="fFc-fe-gfM" firstAttribute="centerX" secondItem="YTW-ZA-HuB" secondAttribute="centerX" id="8yU-ma-MZl"/>
+                        <constraint firstItem="fFc-fe-gfM" firstAttribute="top" secondItem="YTW-ZA-HuB" secondAttribute="top" id="BIe-cT-Z00"/>
+                        <constraint firstAttribute="trailing" secondItem="fFc-fe-gfM" secondAttribute="trailing" id="EgV-Xo-ffp"/>
+                        <constraint firstItem="fFc-fe-gfM" firstAttribute="leading" secondItem="YTW-ZA-HuB" secondAttribute="leading" id="P7H-af-wqG"/>
+                        <constraint firstAttribute="bottom" secondItem="fFc-fe-gfM" secondAttribute="bottom" constant="16" id="wPM-JG-gBO"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YTW-ZA-HuB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9sn-Fv-tdu"/>
+                <constraint firstItem="YTW-ZA-HuB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uz0-dF-xtc"/>
+                <constraint firstAttribute="bottom" secondItem="YTW-ZA-HuB" secondAttribute="bottom" id="Vh0-iN-fDy"/>
+                <constraint firstItem="YTW-ZA-HuB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qBa-vG-mwT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="147.32142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

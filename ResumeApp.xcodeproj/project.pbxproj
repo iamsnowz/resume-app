@@ -9,14 +9,111 @@
 /* Begin PBXBuildFile section */
 		7805814827B6C23C0013F5A3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7805814727B6C23C0013F5A3 /* Realm */; };
 		7805814A27B6C23C0013F5A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7805814927B6C23C0013F5A3 /* RealmSwift */; };
+		780A1B0327BE8E5100AA6685 /* ResumeServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A1B0227BE8E5100AA6685 /* ResumeServiceSpec.swift */; };
+		780A1B0527BE93D900AA6685 /* SkillListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A1B0427BE93D900AA6685 /* SkillListSpec.swift */; };
+		785B20C927BEBF420006DB4F /* ResumeListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B20C827BEBF420006DB4F /* ResumeListSpec.swift */; };
+		785B20CB27BEC91C0006DB4F /* PersonalDetailSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B20CA27BEC91C0006DB4F /* PersonalDetailSpec.swift */; };
+		786E425C27BB9C9C00EF525A /* Nibbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425827BB9C9C00EF525A /* Nibbable.swift */; };
+		786E425D27BB9C9C00EF525A /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */; };
+		786E425E27BB9C9C00EF525A /* NibFileOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */; };
+		786E425F27BB9C9C00EF525A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425B27BB9C9C00EF525A /* CustomButton.swift */; };
+		786E426627BB9CBF00EF525A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426027BB9CBF00EF525A /* UITableView.swift */; };
+		786E426727BB9CBF00EF525A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426127BB9CBF00EF525A /* UIColor.swift */; };
+		786E426827BB9CBF00EF525A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426227BB9CBF00EF525A /* UIViewController.swift */; };
+		786E426927BB9CBF00EF525A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426327BB9CBF00EF525A /* Date.swift */; };
+		786E426A27BB9CBF00EF525A /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426427BB9CBF00EF525A /* UITextView.swift */; };
+		786E426B27BB9CBF00EF525A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426527BB9CBF00EF525A /* UIView.swift */; };
+		786E427127BB9D2600EF525A /* ResumeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E426F27BB9D2600EF525A /* ResumeListViewController.swift */; };
+		786E427227BB9D2600EF525A /* ResumeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E427027BB9D2600EF525A /* ResumeListViewController.xib */; };
+		786E427827BB9E0A00EF525A /* ResumeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E427627BB9E0A00EF525A /* ResumeEditorViewController.swift */; };
+		786E427927BB9E0A00EF525A /* ResumeEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E427727BB9E0A00EF525A /* ResumeEditorViewController.xib */; };
+		786E428227BB9F8C00EF525A /* ResumeContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E428027BB9F8C00EF525A /* ResumeContentViewController.swift */; };
+		786E428327BB9F8C00EF525A /* ResumeContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E428127BB9F8C00EF525A /* ResumeContentViewController.xib */; };
+		786E428627BB9FB500EF525A /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 786E428527BB9FB500EF525A /* Nimble */; };
+		786E428927BB9FBE00EF525A /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 786E428827BB9FBE00EF525A /* Quick */; };
+		786E428C27BB9FC700EF525A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 786E428B27BB9FC700EF525A /* IQKeyboardManagerSwift */; };
+		786E428E27BBA58100EF525A /* SkillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E428D27BBA58100EF525A /* SkillsListViewModel.swift */; };
+		786E429127BBA58A00EF525A /* SkillsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E428F27BBA58A00EF525A /* SkillsListView.swift */; };
+		786E429227BBA58A00EF525A /* SkillsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E429027BBA58A00EF525A /* SkillsListView.xib */; };
+		786E429627BBA59300EF525A /* SkillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E429427BBA59300EF525A /* SkillTableViewCell.xib */; };
+		786E429727BBA59300EF525A /* SkillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E429527BBA59300EF525A /* SkillTableViewCell.swift */; };
+		786E429927BBA5AD00EF525A /* SkillEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E429827BBA5AD00EF525A /* SkillEditorViewModel.swift */; };
+		786E42A627BBA5EE00EF525A /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E429F27BBA5EE00EF525A /* HUD.swift */; };
+		786E42A727BBA5EE00EF525A /* AddNewContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E42A127BBA5EE00EF525A /* AddNewContentTableViewCell.xib */; };
+		786E42A827BBA5EE00EF525A /* AddNewContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E42A227BBA5EE00EF525A /* AddNewContentTableViewCell.swift */; };
+		786E42A927BBA5EE00EF525A /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E42A427BBA5EE00EF525A /* DatePickerView.swift */; };
+		786E42AA27BBA5EE00EF525A /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E42A527BBA5EE00EF525A /* DatePickerView.xib */; };
+		786E42AD27BBA80000EF525A /* SkillEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E42AB27BBA80000EF525A /* SkillEditorViewController.swift */; };
+		786E42AE27BBA80000EF525A /* SkillEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E42AC27BBA80000EF525A /* SkillEditorViewController.xib */; };
+		786E42B127BBB24600EF525A /* ProjectDetailEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E42AF27BBB24500EF525A /* ProjectDetailEditorViewController.swift */; };
+		786E42B227BBB24600EF525A /* ProjectDetailEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E42B027BBB24500EF525A /* ProjectDetailEditorViewController.xib */; };
+		786E42B627BBBB2200EF525A /* ProjectDetailsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E42B527BBBB2200EF525A /* ProjectDetailsListView.swift */; };
+		786E42B827BBBC2900EF525A /* ProjectDetailsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E42B727BBBC2900EF525A /* ProjectDetailsListView.xib */; };
+		786E42BA27BBC1BF00EF525A /* EducationDetailsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E42B927BBC1BF00EF525A /* EducationDetailsListView.swift */; };
+		786E42BC27BBC1C600EF525A /* EducationDetailsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E42BB27BBC1C600EF525A /* EducationDetailsListView.xib */; };
+		786E42BE27BBC21200EF525A /* WorkSummaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E42BD27BBC21200EF525A /* WorkSummaryListView.swift */; };
+		786E42C027BBC21800EF525A /* WorkSummaryListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786E42BF27BBC21800EF525A /* WorkSummaryListView.xib */; };
+		78A50FDC27BBD0D300DCF489 /* EducationEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FDA27BBD0D300DCF489 /* EducationEditorViewController.swift */; };
+		78A50FDD27BBD0D300DCF489 /* EducationEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A50FDB27BBD0D300DCF489 /* EducationEditorViewController.xib */; };
+		78A50FE027BBD0E400DCF489 /* WorkSummaryEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FDE27BBD0E400DCF489 /* WorkSummaryEditorViewController.swift */; };
+		78A50FE127BBD0E400DCF489 /* WorkSummaryEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A50FDF27BBD0E400DCF489 /* WorkSummaryEditorViewController.xib */; };
+		78A50FE327BBE42500DCF489 /* WorkSummaryEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FE227BBE42500DCF489 /* WorkSummaryEditorViewModel.swift */; };
+		78A50FE627BBF54600DCF489 /* WorkSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FE427BBF54600DCF489 /* WorkSummaryTableViewCell.swift */; };
+		78A50FE727BBF54600DCF489 /* WorkSummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A50FE527BBF54600DCF489 /* WorkSummaryTableViewCell.xib */; };
+		78A50FEA27BBF5B600DCF489 /* WorkSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FE927BBF5B600DCF489 /* WorkSummaryModel.swift */; };
+		78A50FEC27BBF63100DCF489 /* WorkSummaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FEB27BBF63100DCF489 /* WorkSummaryListViewModel.swift */; };
+		78A50FEE27BBFFA800DCF489 /* ProjectDetailsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FED27BBFFA800DCF489 /* ProjectDetailsListViewModel.swift */; };
+		78A50FF027BC002600DCF489 /* ProjectDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FEF27BC002600DCF489 /* ProjectDetailModel.swift */; };
+		78A50FF227BC006200DCF489 /* ProjectDetailEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FF127BC006200DCF489 /* ProjectDetailEditorViewModel.swift */; };
+		78A50FF627BC047E00DCF489 /* ProjectDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FF427BC047E00DCF489 /* ProjectDetailTableViewCell.swift */; };
+		78A50FF727BC047E00DCF489 /* ProjectDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A50FF527BC047E00DCF489 /* ProjectDetailTableViewCell.xib */; };
+		78A50FF927BC0AD000DCF489 /* EducationDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FF827BC0AD000DCF489 /* EducationDetailModel.swift */; };
+		78A50FFB27BC0B6700DCF489 /* EducationDetailsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FFA27BC0B6700DCF489 /* EducationDetailsListViewModel.swift */; };
+		78A50FFD27BC0BEC00DCF489 /* EducationEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FFC27BC0BEC00DCF489 /* EducationEditorViewModel.swift */; };
+		78A5100127BC1FAC00DCF489 /* EducationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A50FFF27BC1FAC00DCF489 /* EducationDetailTableViewCell.swift */; };
+		78A5100227BC1FAC00DCF489 /* EducationDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5100027BC1FAC00DCF489 /* EducationDetailTableViewCell.xib */; };
+		78A5100427BC314300DCF489 /* PersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5100327BC314300DCF489 /* PersonalDetailsView.swift */; };
+		78A5100627BC314900DCF489 /* PersonalDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5100527BC314900DCF489 /* PersonalDetailsView.xib */; };
+		78A5100827BC37F400DCF489 /* PersonalDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5100727BC37F400DCF489 /* PersonalDetailsViewModel.swift */; };
+		78A5100A27BC3EB600DCF489 /* ResumeEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5100927BC3EB600DCF489 /* ResumeEditorViewModel.swift */; };
+		78A5101027BCB0D900DCF489 /* ResumeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5100F27BCB0D900DCF489 /* ResumeObject.swift */; };
+		78A5101227BCB20D00DCF489 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5101127BCB20D00DCF489 /* RealmService.swift */; };
+		78A5101527BCBB1900DCF489 /* ResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5101427BCBB1900DCF489 /* ResumeService.swift */; };
+		78A5101727BCC64B00DCF489 /* ResumeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5101627BCC64B00DCF489 /* ResumeListViewModel.swift */; };
+		78A5101A27BCC75600DCF489 /* ResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5101827BCC75600DCF489 /* ResumeTableViewCell.swift */; };
+		78A5101B27BCC75600DCF489 /* ResumeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5101927BCC75600DCF489 /* ResumeTableViewCell.xib */; };
+		78A5102027BCF93A00DCF489 /* WorkSummaryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5101F27BCF93A00DCF489 /* WorkSummaryObject.swift */; };
+		78A5102227BCF97700DCF489 /* SkillObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5102127BCF97700DCF489 /* SkillObject.swift */; };
+		78A5102427BCF98200DCF489 /* EducationDetailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5102327BCF98200DCF489 /* EducationDetailObject.swift */; };
+		78A5102627BCF99300DCF489 /* ProjectDetailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5102527BCF99300DCF489 /* ProjectDetailObject.swift */; };
+		78A5102927BCFB1500DCF489 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5102827BCFB1500DCF489 /* ResumeItem.swift */; };
+		78A5103127BD24C600DCF489 /* PersonalDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5103027BD24C600DCF489 /* PersonalDetailModel.swift */; };
+		78A5103327BD55BE00DCF489 /* ResumeContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5103227BD55BE00DCF489 /* ResumeContentViewModel.swift */; };
+		78A5103727BD60D800DCF489 /* WorkSummaryContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5103527BD60D800DCF489 /* WorkSummaryContentTableViewCell.swift */; };
+		78A5103827BD60D800DCF489 /* WorkSummaryContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5103627BD60D800DCF489 /* WorkSummaryContentTableViewCell.xib */; };
+		78A5103F27BD611000DCF489 /* SkillContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5103D27BD611000DCF489 /* SkillContentTableViewCell.swift */; };
+		78A5104027BD611000DCF489 /* SkillContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5103E27BD611000DCF489 /* SkillContentTableViewCell.xib */; };
+		78A5104327BD611E00DCF489 /* EducationDetailContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5104127BD611E00DCF489 /* EducationDetailContentTableViewCell.swift */; };
+		78A5104427BD611E00DCF489 /* EducationDetailContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5104227BD611E00DCF489 /* EducationDetailContentTableViewCell.xib */; };
+		78A5104727BD612800DCF489 /* ProjectDetailContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5104527BD612800DCF489 /* ProjectDetailContentTableViewCell.swift */; };
+		78A5104827BD612800DCF489 /* ProjectDetailContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A5104627BD612800DCF489 /* ProjectDetailContentTableViewCell.xib */; };
+		78A5104A27BDE8EA00DCF489 /* SkillEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A5104927BDE8EA00DCF489 /* SkillEditorSpec.swift */; };
 		78ACA73A27B6C1B2007AC1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */; };
 		78ACA73C27B6C1B2007AC1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */; };
-		78ACA73E27B6C1B2007AC1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA73D27B6C1B2007AC1D1 /* ViewController.swift */; };
 		78ACA74327B6C1B3007AC1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78ACA74227B6C1B3007AC1D1 /* Assets.xcassets */; };
 		78ACA74627B6C1B3007AC1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78ACA74427B6C1B3007AC1D1 /* LaunchScreen.storyboard */; };
-		78ACA75127B6C1B3007AC1D1 /* ResumeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA75027B6C1B3007AC1D1 /* ResumeAppTests.swift */; };
 		78ACA75B27B6C1B3007AC1D1 /* ResumeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA75A27B6C1B3007AC1D1 /* ResumeAppUITests.swift */; };
 		78ACA75D27B6C1B3007AC1D1 /* ResumeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ACA75C27B6C1B3007AC1D1 /* ResumeAppUITestsLaunchTests.swift */; };
+		78B5E43627BE1026006280D2 /* ProjectDetailEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43527BE1026006280D2 /* ProjectDetailEditorSpec.swift */; };
+		78B5E43A27BE16B4006280D2 /* EducationDetailEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43927BE16B4006280D2 /* EducationDetailEditorSpec.swift */; };
+		78B5E43C27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43B27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift */; };
+		78B5E44027BE305A006280D2 /* ResumeContentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E43F27BE305A006280D2 /* ResumeContentSpec.swift */; };
+		78B5E44227BE3087006280D2 /* ResumeEditorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E44127BE3087006280D2 /* ResumeEditorSpec.swift */; };
+		78B5E44627BE321D006280D2 /* ResumeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E44527BE321D006280D2 /* ResumeMock.swift */; };
+		78B5E44827BE35DA006280D2 /* ResumeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */; };
+		78BF2C5C27BEAACF00DD818F /* EducationListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF2C5B27BEAACF00DD818F /* EducationListSpec.swift */; };
+		78BF2C5E27BEB2B200DD818F /* ProjectListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF2C5D27BEB2B200DD818F /* ProjectListSpec.swift */; };
+		78F8D34427BE426900EF346C /* WorkSummaryListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8D34327BE426900EF346C /* WorkSummaryListSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +134,112 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		780A1B0227BE8E5100AA6685 /* ResumeServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServiceSpec.swift; sourceTree = "<group>"; };
+		780A1B0427BE93D900AA6685 /* SkillListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListSpec.swift; sourceTree = "<group>"; };
+		785B20C827BEBF420006DB4F /* ResumeListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListSpec.swift; sourceTree = "<group>"; };
+		785B20CA27BEC91C0006DB4F /* PersonalDetailSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailSpec.swift; sourceTree = "<group>"; };
+		786E425827BB9C9C00EF525A /* Nibbable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nibbable.swift; sourceTree = "<group>"; };
+		786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
+		786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibFileOwnerLoadable.swift; sourceTree = "<group>"; };
+		786E425B27BB9C9C00EF525A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		786E426027BB9CBF00EF525A /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		786E426127BB9CBF00EF525A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		786E426227BB9CBF00EF525A /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		786E426327BB9CBF00EF525A /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		786E426427BB9CBF00EF525A /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		786E426527BB9CBF00EF525A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		786E426F27BB9D2600EF525A /* ResumeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListViewController.swift; sourceTree = "<group>"; };
+		786E427027BB9D2600EF525A /* ResumeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeListViewController.xib; sourceTree = "<group>"; };
+		786E427627BB9E0A00EF525A /* ResumeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeEditorViewController.swift; sourceTree = "<group>"; };
+		786E427727BB9E0A00EF525A /* ResumeEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeEditorViewController.xib; sourceTree = "<group>"; };
+		786E428027BB9F8C00EF525A /* ResumeContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeContentViewController.swift; sourceTree = "<group>"; };
+		786E428127BB9F8C00EF525A /* ResumeContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeContentViewController.xib; sourceTree = "<group>"; };
+		786E428D27BBA58100EF525A /* SkillsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsListViewModel.swift; sourceTree = "<group>"; };
+		786E428F27BBA58A00EF525A /* SkillsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsListView.swift; sourceTree = "<group>"; };
+		786E429027BBA58A00EF525A /* SkillsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkillsListView.xib; sourceTree = "<group>"; };
+		786E429427BBA59300EF525A /* SkillTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkillTableViewCell.xib; sourceTree = "<group>"; };
+		786E429527BBA59300EF525A /* SkillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillTableViewCell.swift; sourceTree = "<group>"; };
+		786E429827BBA5AD00EF525A /* SkillEditorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillEditorViewModel.swift; sourceTree = "<group>"; };
+		786E429F27BBA5EE00EF525A /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		786E42A127BBA5EE00EF525A /* AddNewContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewContentTableViewCell.xib; sourceTree = "<group>"; };
+		786E42A227BBA5EE00EF525A /* AddNewContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewContentTableViewCell.swift; sourceTree = "<group>"; };
+		786E42A427BBA5EE00EF525A /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		786E42A527BBA5EE00EF525A /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		786E42AB27BBA80000EF525A /* SkillEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillEditorViewController.swift; sourceTree = "<group>"; };
+		786E42AC27BBA80000EF525A /* SkillEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillEditorViewController.xib; sourceTree = "<group>"; };
+		786E42AF27BBB24500EF525A /* ProjectDetailEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailEditorViewController.swift; sourceTree = "<group>"; };
+		786E42B027BBB24500EF525A /* ProjectDetailEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailEditorViewController.xib; sourceTree = "<group>"; };
+		786E42B527BBBB2200EF525A /* ProjectDetailsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsListView.swift; sourceTree = "<group>"; };
+		786E42B727BBBC2900EF525A /* ProjectDetailsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailsListView.xib; sourceTree = "<group>"; };
+		786E42B927BBC1BF00EF525A /* EducationDetailsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailsListView.swift; sourceTree = "<group>"; };
+		786E42BB27BBC1C600EF525A /* EducationDetailsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationDetailsListView.xib; sourceTree = "<group>"; };
+		786E42BD27BBC21200EF525A /* WorkSummaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryListView.swift; sourceTree = "<group>"; };
+		786E42BF27BBC21800EF525A /* WorkSummaryListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkSummaryListView.xib; sourceTree = "<group>"; };
+		78A50FDA27BBD0D300DCF489 /* EducationEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationEditorViewController.swift; sourceTree = "<group>"; };
+		78A50FDB27BBD0D300DCF489 /* EducationEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationEditorViewController.xib; sourceTree = "<group>"; };
+		78A50FDE27BBD0E400DCF489 /* WorkSummaryEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryEditorViewController.swift; sourceTree = "<group>"; };
+		78A50FDF27BBD0E400DCF489 /* WorkSummaryEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkSummaryEditorViewController.xib; sourceTree = "<group>"; };
+		78A50FE227BBE42500DCF489 /* WorkSummaryEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryEditorViewModel.swift; sourceTree = "<group>"; };
+		78A50FE427BBF54600DCF489 /* WorkSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryTableViewCell.swift; sourceTree = "<group>"; };
+		78A50FE527BBF54600DCF489 /* WorkSummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkSummaryTableViewCell.xib; sourceTree = "<group>"; };
+		78A50FE927BBF5B600DCF489 /* WorkSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryModel.swift; sourceTree = "<group>"; };
+		78A50FEB27BBF63100DCF489 /* WorkSummaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryListViewModel.swift; sourceTree = "<group>"; };
+		78A50FED27BBFFA800DCF489 /* ProjectDetailsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsListViewModel.swift; sourceTree = "<group>"; };
+		78A50FEF27BC002600DCF489 /* ProjectDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailModel.swift; sourceTree = "<group>"; };
+		78A50FF127BC006200DCF489 /* ProjectDetailEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailEditorViewModel.swift; sourceTree = "<group>"; };
+		78A50FF427BC047E00DCF489 /* ProjectDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailTableViewCell.swift; sourceTree = "<group>"; };
+		78A50FF527BC047E00DCF489 /* ProjectDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailTableViewCell.xib; sourceTree = "<group>"; };
+		78A50FF827BC0AD000DCF489 /* EducationDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailModel.swift; sourceTree = "<group>"; };
+		78A50FFA27BC0B6700DCF489 /* EducationDetailsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailsListViewModel.swift; sourceTree = "<group>"; };
+		78A50FFC27BC0BEC00DCF489 /* EducationEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationEditorViewModel.swift; sourceTree = "<group>"; };
+		78A50FFF27BC1FAC00DCF489 /* EducationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		78A5100027BC1FAC00DCF489 /* EducationDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationDetailTableViewCell.xib; sourceTree = "<group>"; };
+		78A5100327BC314300DCF489 /* PersonalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsView.swift; sourceTree = "<group>"; };
+		78A5100527BC314900DCF489 /* PersonalDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDetailsView.xib; sourceTree = "<group>"; };
+		78A5100727BC37F400DCF489 /* PersonalDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewModel.swift; sourceTree = "<group>"; };
+		78A5100927BC3EB600DCF489 /* ResumeEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeEditorViewModel.swift; sourceTree = "<group>"; };
+		78A5100F27BCB0D900DCF489 /* ResumeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeObject.swift; sourceTree = "<group>"; };
+		78A5101127BCB20D00DCF489 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		78A5101427BCBB1900DCF489 /* ResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeService.swift; sourceTree = "<group>"; };
+		78A5101627BCC64B00DCF489 /* ResumeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListViewModel.swift; sourceTree = "<group>"; };
+		78A5101827BCC75600DCF489 /* ResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTableViewCell.swift; sourceTree = "<group>"; };
+		78A5101927BCC75600DCF489 /* ResumeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeTableViewCell.xib; sourceTree = "<group>"; };
+		78A5101F27BCF93A00DCF489 /* WorkSummaryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryObject.swift; sourceTree = "<group>"; };
+		78A5102127BCF97700DCF489 /* SkillObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillObject.swift; sourceTree = "<group>"; };
+		78A5102327BCF98200DCF489 /* EducationDetailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailObject.swift; sourceTree = "<group>"; };
+		78A5102527BCF99300DCF489 /* ProjectDetailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailObject.swift; sourceTree = "<group>"; };
+		78A5102827BCFB1500DCF489 /* ResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItem.swift; sourceTree = "<group>"; };
+		78A5103027BD24C600DCF489 /* PersonalDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailModel.swift; sourceTree = "<group>"; };
+		78A5103227BD55BE00DCF489 /* ResumeContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeContentViewModel.swift; sourceTree = "<group>"; };
+		78A5103527BD60D800DCF489 /* WorkSummaryContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryContentTableViewCell.swift; sourceTree = "<group>"; };
+		78A5103627BD60D800DCF489 /* WorkSummaryContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkSummaryContentTableViewCell.xib; sourceTree = "<group>"; };
+		78A5103D27BD611000DCF489 /* SkillContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillContentTableViewCell.swift; sourceTree = "<group>"; };
+		78A5103E27BD611000DCF489 /* SkillContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillContentTableViewCell.xib; sourceTree = "<group>"; };
+		78A5104127BD611E00DCF489 /* EducationDetailContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailContentTableViewCell.swift; sourceTree = "<group>"; };
+		78A5104227BD611E00DCF489 /* EducationDetailContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationDetailContentTableViewCell.xib; sourceTree = "<group>"; };
+		78A5104527BD612800DCF489 /* ProjectDetailContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailContentTableViewCell.swift; sourceTree = "<group>"; };
+		78A5104627BD612800DCF489 /* ProjectDetailContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailContentTableViewCell.xib; sourceTree = "<group>"; };
+		78A5104927BDE8EA00DCF489 /* SkillEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillEditorSpec.swift; sourceTree = "<group>"; };
 		78ACA73627B6C1B2007AC1D1 /* ResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78ACA73D27B6C1B2007AC1D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78ACA74227B6C1B3007AC1D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78ACA74527B6C1B3007AC1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78ACA74727B6C1B3007AC1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78ACA74C27B6C1B3007AC1D1 /* ResumeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResumeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78ACA75027B6C1B3007AC1D1 /* ResumeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppTests.swift; sourceTree = "<group>"; };
 		78ACA75627B6C1B3007AC1D1 /* ResumeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResumeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ACA75A27B6C1B3007AC1D1 /* ResumeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppUITests.swift; sourceTree = "<group>"; };
 		78ACA75C27B6C1B3007AC1D1 /* ResumeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78B5E43527BE1026006280D2 /* ProjectDetailEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E43927BE16B4006280D2 /* EducationDetailEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E43B27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E43F27BE305A006280D2 /* ResumeContentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeContentSpec.swift; sourceTree = "<group>"; };
+		78B5E44127BE3087006280D2 /* ResumeEditorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeEditorSpec.swift; sourceTree = "<group>"; };
+		78B5E44527BE321D006280D2 /* ResumeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeMock.swift; sourceTree = "<group>"; };
+		78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServiceMock.swift; sourceTree = "<group>"; };
+		78BF2C5B27BEAACF00DD818F /* EducationListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationListSpec.swift; sourceTree = "<group>"; };
+		78BF2C5D27BEB2B200DD818F /* ProjectListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListSpec.swift; sourceTree = "<group>"; };
+		78F8D34327BE426900EF346C /* WorkSummaryListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryListSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +247,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786E428C27BB9FC700EF525A /* IQKeyboardManagerSwift in Frameworks */,
+				786E428627BB9FB500EF525A /* Nimble in Frameworks */,
 				7805814A27B6C23C0013F5A3 /* RealmSwift in Frameworks */,
+				786E428927BB9FBE00EF525A /* Quick in Frameworks */,
 				7805814827B6C23C0013F5A3 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +272,665 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780A1B0127BE8E4100AA6685 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				78B5E44527BE321D006280D2 /* ResumeMock.swift */,
+				78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		785B20C727BEBF350006DB4F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				780A1B0227BE8E5100AA6685 /* ResumeServiceSpec.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		786E422A27BB9ADC00EF525A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				786E423127BB9B2900EF525A /* Personal Details */,
+				786E423027BB9B2400EF525A /* Work Summary */,
+				786E422F27BB9B1F00EF525A /* Education Details */,
+				786E422E27BB9B1A00EF525A /* Project Details */,
+				786E422D27BB9B1700EF525A /* Skills */,
+				786E422C27BB9B0300EF525A /* Resume */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		786E422B27BB9AF300EF525A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				786E425B27BB9C9C00EF525A /* CustomButton.swift */,
+				786E42A027BBA5EE00EF525A /* AddNewContentTableViewCell */,
+				786E42A327BBA5EE00EF525A /* DatePickerView */,
+				786E429E27BBA5EE00EF525A /* HUD */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		786E422C27BB9B0300EF525A /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				78A5102727BCFB0900DCF489 /* Model */,
+				786E427327BB9DEE00EF525A /* Editor */,
+				786E423327BB9B3C00EF525A /* Content */,
+				786E423227BB9B3200EF525A /* List */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
+		786E422D27BB9B1700EF525A /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				786E423A27BB9B5800EF525A /* List */,
+				786E423927BB9B5300EF525A /* Editor */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		786E422E27BB9B1A00EF525A /* Project Details */ = {
+			isa = PBXGroup;
+			children = (
+				786E424127BB9B8B00EF525A /* Model */,
+				786E424027BB9B8900EF525A /* List */,
+				786E423F27BB9B8000EF525A /* Editor */,
+			);
+			path = "Project Details";
+			sourceTree = "<group>";
+		};
+		786E422F27BB9B1F00EF525A /* Education Details */ = {
+			isa = PBXGroup;
+			children = (
+				786E424827BB9BA200EF525A /* Model */,
+				786E424727BB9BA000EF525A /* List */,
+				786E424627BB9B9D00EF525A /* Editor */,
+			);
+			path = "Education Details";
+			sourceTree = "<group>";
+		};
+		786E423027BB9B2400EF525A /* Work Summary */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FE827BBF5AF00DCF489 /* Model */,
+				786E424E27BB9BB500EF525A /* List */,
+				786E424D27BB9BB100EF525A /* Editor */,
+			);
+			path = "Work Summary";
+			sourceTree = "<group>";
+		};
+		786E423127BB9B2900EF525A /* Personal Details */ = {
+			isa = PBXGroup;
+			children = (
+				78A5102F27BD24BD00DCF489 /* Model */,
+				786E425527BB9BD900EF525A /* View */,
+				786E425427BB9BD500EF525A /* ViewModel */,
+			);
+			path = "Personal Details";
+			sourceTree = "<group>";
+		};
+		786E423227BB9B3200EF525A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				786E423627BB9B4400EF525A /* Cell */,
+				786E423527BB9B4100EF525A /* View */,
+				786E423427BB9B3E00EF525A /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		786E423327BB9B3C00EF525A /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				78A5103427BD60C700DCF489 /* Cell */,
+				786E423727BB9B4900EF525A /* View */,
+				786E423827BB9B4B00EF525A /* ViewModel */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		786E423427BB9B3E00EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A5101627BCC64B00DCF489 /* ResumeListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E423527BB9B4100EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E426F27BB9D2600EF525A /* ResumeListViewController.swift */,
+				786E427027BB9D2600EF525A /* ResumeListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E423627BB9B4400EF525A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78A5101827BCC75600DCF489 /* ResumeTableViewCell.swift */,
+				78A5101927BCC75600DCF489 /* ResumeTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		786E423727BB9B4900EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E428027BB9F8C00EF525A /* ResumeContentViewController.swift */,
+				786E428127BB9F8C00EF525A /* ResumeContentViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E423827BB9B4B00EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A5103227BD55BE00DCF489 /* ResumeContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E423927BB9B5300EF525A /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				786E423C27BB9B5E00EF525A /* View */,
+				786E423B27BB9B5C00EF525A /* ViewModel */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		786E423A27BB9B5800EF525A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				786E429327BBA59300EF525A /* Cell */,
+				786E423E27BB9B6900EF525A /* View */,
+				786E423D27BB9B5F00EF525A /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		786E423B27BB9B5C00EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				786E429827BBA5AD00EF525A /* SkillEditorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E423C27BB9B5E00EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E42AB27BBA80000EF525A /* SkillEditorViewController.swift */,
+				786E42AC27BBA80000EF525A /* SkillEditorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E423D27BB9B5F00EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				786E428D27BBA58100EF525A /* SkillsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E423E27BB9B6900EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E428F27BBA58A00EF525A /* SkillsListView.swift */,
+				786E429027BBA58A00EF525A /* SkillsListView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E423F27BB9B8000EF525A /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				786E424327BB9B9400EF525A /* View */,
+				786E424227BB9B9100EF525A /* ViewModel */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		786E424027BB9B8900EF525A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FF327BC047500DCF489 /* Cell */,
+				786E424527BB9B9800EF525A /* View */,
+				786E424427BB9B9500EF525A /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		786E424127BB9B8B00EF525A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FEF27BC002600DCF489 /* ProjectDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		786E424227BB9B9100EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FF127BC006200DCF489 /* ProjectDetailEditorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E424327BB9B9400EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E42AF27BBB24500EF525A /* ProjectDetailEditorViewController.swift */,
+				786E42B027BBB24500EF525A /* ProjectDetailEditorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E424427BB9B9500EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FED27BBFFA800DCF489 /* ProjectDetailsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E424527BB9B9800EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E42B527BBBB2200EF525A /* ProjectDetailsListView.swift */,
+				786E42B727BBBC2900EF525A /* ProjectDetailsListView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E424627BB9B9D00EF525A /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				786E424A27BB9BA800EF525A /* View */,
+				786E424927BB9BA400EF525A /* ViewModel */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		786E424727BB9BA000EF525A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FFE27BC1F9200DCF489 /* Cell */,
+				786E424C27BB9BAD00EF525A /* View */,
+				786E424B27BB9BAA00EF525A /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		786E424827BB9BA200EF525A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FF827BC0AD000DCF489 /* EducationDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		786E424927BB9BA400EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FFC27BC0BEC00DCF489 /* EducationEditorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E424A27BB9BA800EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FDA27BBD0D300DCF489 /* EducationEditorViewController.swift */,
+				78A50FDB27BBD0D300DCF489 /* EducationEditorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E424B27BB9BAA00EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FFA27BC0B6700DCF489 /* EducationDetailsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E424C27BB9BAD00EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E42B927BBC1BF00EF525A /* EducationDetailsListView.swift */,
+				786E42BB27BBC1C600EF525A /* EducationDetailsListView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E424D27BB9BB100EF525A /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				786E425027BB9BC300EF525A /* View */,
+				786E424F27BB9BBD00EF525A /* ViewModel */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		786E424E27BB9BB500EF525A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				786E425327BB9BD000EF525A /* Cell */,
+				786E425227BB9BCD00EF525A /* View */,
+				786E425127BB9BC600EF525A /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		786E424F27BB9BBD00EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FE227BBE42500DCF489 /* WorkSummaryEditorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E425027BB9BC300EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FDE27BBD0E400DCF489 /* WorkSummaryEditorViewController.swift */,
+				78A50FDF27BBD0E400DCF489 /* WorkSummaryEditorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E425127BB9BC600EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FEB27BBF63100DCF489 /* WorkSummaryListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E425227BB9BCD00EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E42BD27BBC21200EF525A /* WorkSummaryListView.swift */,
+				786E42BF27BBC21800EF525A /* WorkSummaryListView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E425327BB9BD000EF525A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FE427BBF54600DCF489 /* WorkSummaryTableViewCell.swift */,
+				78A50FE527BBF54600DCF489 /* WorkSummaryTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		786E425427BB9BD500EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A5100727BC37F400DCF489 /* PersonalDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E425527BB9BD900EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78A5100327BC314300DCF489 /* PersonalDetailsView.swift */,
+				78A5100527BC314900DCF489 /* PersonalDetailsView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E425627BB9BF500EF525A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				786E426327BB9CBF00EF525A /* Date.swift */,
+				786E426127BB9CBF00EF525A /* UIColor.swift */,
+				786E426027BB9CBF00EF525A /* UITableView.swift */,
+				786E426427BB9CBF00EF525A /* UITextView.swift */,
+				786E426527BB9CBF00EF525A /* UIView.swift */,
+				786E426227BB9CBF00EF525A /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		786E425727BB9BFC00EF525A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */,
+				786E425827BB9C9C00EF525A /* Nibbable.swift */,
+				786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		786E427327BB9DEE00EF525A /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				786E427527BB9DFE00EF525A /* View */,
+				786E427427BB9DF900EF525A /* ViewModel */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		786E427427BB9DF900EF525A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78A5100927BC3EB600DCF489 /* ResumeEditorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		786E427527BB9DFE00EF525A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E427627BB9E0A00EF525A /* ResumeEditorViewController.swift */,
+				786E427727BB9E0A00EF525A /* ResumeEditorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E429327BBA59300EF525A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				786E429427BBA59300EF525A /* SkillTableViewCell.xib */,
+				786E429527BBA59300EF525A /* SkillTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		786E429E27BBA5EE00EF525A /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				786E429F27BBA5EE00EF525A /* HUD.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		786E42A027BBA5EE00EF525A /* AddNewContentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				786E42A127BBA5EE00EF525A /* AddNewContentTableViewCell.xib */,
+				786E42A227BBA5EE00EF525A /* AddNewContentTableViewCell.swift */,
+			);
+			path = AddNewContentTableViewCell;
+			sourceTree = "<group>";
+		};
+		786E42A327BBA5EE00EF525A /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				786E42A427BBA5EE00EF525A /* DatePickerView.swift */,
+				786E42A527BBA5EE00EF525A /* DatePickerView.xib */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		78A50FE827BBF5AF00DCF489 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FE927BBF5B600DCF489 /* WorkSummaryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78A50FF327BC047500DCF489 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FF427BC047E00DCF489 /* ProjectDetailTableViewCell.swift */,
+				78A50FF527BC047E00DCF489 /* ProjectDetailTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		78A50FFE27BC1F9200DCF489 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78A50FFF27BC1FAC00DCF489 /* EducationDetailTableViewCell.swift */,
+				78A5100027BC1FAC00DCF489 /* EducationDetailTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		78A5100D27BCB0BC00DCF489 /* Realms */ = {
+			isa = PBXGroup;
+			children = (
+				78A5101127BCB20D00DCF489 /* RealmService.swift */,
+			);
+			path = Realms;
+			sourceTree = "<group>";
+		};
+		78A5100E27BCB0BF00DCF489 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78A5102E27BCFD8D00DCF489 /* ProjectDetail */,
+				78A5102D27BCFD8900DCF489 /* EducationDetail */,
+				78A5102C27BCFD8500DCF489 /* Skill */,
+				78A5102B27BCFD8200DCF489 /* WorkSummary */,
+				78A5102A27BCFD7D00DCF489 /* Resume */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78A5101327BCBB0900DCF489 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				78A5101427BCBB1900DCF489 /* ResumeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		78A5102727BCFB0900DCF489 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78A5102827BCFB1500DCF489 /* ResumeItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78A5102A27BCFD7D00DCF489 /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				78A5100F27BCB0D900DCF489 /* ResumeObject.swift */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
+		78A5102B27BCFD8200DCF489 /* WorkSummary */ = {
+			isa = PBXGroup;
+			children = (
+				78A5101F27BCF93A00DCF489 /* WorkSummaryObject.swift */,
+			);
+			path = WorkSummary;
+			sourceTree = "<group>";
+		};
+		78A5102C27BCFD8500DCF489 /* Skill */ = {
+			isa = PBXGroup;
+			children = (
+				78A5102127BCF97700DCF489 /* SkillObject.swift */,
+			);
+			path = Skill;
+			sourceTree = "<group>";
+		};
+		78A5102D27BCFD8900DCF489 /* EducationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				78A5102327BCF98200DCF489 /* EducationDetailObject.swift */,
+			);
+			path = EducationDetail;
+			sourceTree = "<group>";
+		};
+		78A5102E27BCFD8D00DCF489 /* ProjectDetail */ = {
+			isa = PBXGroup;
+			children = (
+				78A5102527BCF99300DCF489 /* ProjectDetailObject.swift */,
+			);
+			path = ProjectDetail;
+			sourceTree = "<group>";
+		};
+		78A5102F27BD24BD00DCF489 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78A5103027BD24C600DCF489 /* PersonalDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78A5103427BD60C700DCF489 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78A5103927BD60DF00DCF489 /* Work Summary */,
+				78A5103A27BD60E700DCF489 /* Skill */,
+				78A5103B27BD60E900DCF489 /* Education details */,
+				78A5103C27BD60EE00DCF489 /* Project details */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		78A5103927BD60DF00DCF489 /* Work Summary */ = {
+			isa = PBXGroup;
+			children = (
+				78A5103527BD60D800DCF489 /* WorkSummaryContentTableViewCell.swift */,
+				78A5103627BD60D800DCF489 /* WorkSummaryContentTableViewCell.xib */,
+			);
+			path = "Work Summary";
+			sourceTree = "<group>";
+		};
+		78A5103A27BD60E700DCF489 /* Skill */ = {
+			isa = PBXGroup;
+			children = (
+				78A5103D27BD611000DCF489 /* SkillContentTableViewCell.swift */,
+				78A5103E27BD611000DCF489 /* SkillContentTableViewCell.xib */,
+			);
+			path = Skill;
+			sourceTree = "<group>";
+		};
+		78A5103B27BD60E900DCF489 /* Education details */ = {
+			isa = PBXGroup;
+			children = (
+				78A5104127BD611E00DCF489 /* EducationDetailContentTableViewCell.swift */,
+				78A5104227BD611E00DCF489 /* EducationDetailContentTableViewCell.xib */,
+			);
+			path = "Education details";
+			sourceTree = "<group>";
+		};
+		78A5103C27BD60EE00DCF489 /* Project details */ = {
+			isa = PBXGroup;
+			children = (
+				78A5104527BD612800DCF489 /* ProjectDetailContentTableViewCell.swift */,
+				78A5104627BD612800DCF489 /* ProjectDetailContentTableViewCell.xib */,
+			);
+			path = "Project details";
+			sourceTree = "<group>";
+		};
 		78ACA72D27B6C1B2007AC1D1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +954,15 @@
 		78ACA73827B6C1B2007AC1D1 /* ResumeApp */ = {
 			isa = PBXGroup;
 			children = (
+				78A5100D27BCB0BC00DCF489 /* Realms */,
+				786E425727BB9BFC00EF525A /* Utilities */,
+				786E425627BB9BF500EF525A /* Extensions */,
+				786E422B27BB9AF300EF525A /* Components */,
+				78A5100E27BCB0BF00DCF489 /* Model */,
+				78A5101327BCBB0900DCF489 /* Services */,
+				786E422A27BB9ADC00EF525A /* Screens */,
 				78ACA73927B6C1B2007AC1D1 /* AppDelegate.swift */,
 				78ACA73B27B6C1B2007AC1D1 /* SceneDelegate.swift */,
-				78ACA73D27B6C1B2007AC1D1 /* ViewController.swift */,
 				78ACA74227B6C1B3007AC1D1 /* Assets.xcassets */,
 				78ACA74427B6C1B3007AC1D1 /* LaunchScreen.storyboard */,
 				78ACA74727B6C1B3007AC1D1 /* Info.plist */,
@@ -114,7 +973,14 @@
 		78ACA74F27B6C1B3007AC1D1 /* ResumeAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				78ACA75027B6C1B3007AC1D1 /* ResumeAppTests.swift */,
+				785B20C727BEBF350006DB4F /* Service */,
+				78BF2C5A27BEAAAF00DD818F /* Personal Details */,
+				78BF2C5927BEAAA600DD818F /* Resume */,
+				78BF2C5827BEAA9700DD818F /* Project Details */,
+				78BF2C5727BEAA6B00DD818F /* Education Details */,
+				78BF2C5627BEAA6100DD818F /* WorkSummary */,
+				78BF2C5527BEAA5800DD818F /* Skills */,
+				780A1B0127BE8E4100AA6685 /* Mock */,
 			);
 			path = ResumeAppTests;
 			sourceTree = "<group>";
@@ -126,6 +992,60 @@
 				78ACA75C27B6C1B3007AC1D1 /* ResumeAppUITestsLaunchTests.swift */,
 			);
 			path = ResumeAppUITests;
+			sourceTree = "<group>";
+		};
+		78BF2C5527BEAA5800DD818F /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				78A5104927BDE8EA00DCF489 /* SkillEditorSpec.swift */,
+				780A1B0427BE93D900AA6685 /* SkillListSpec.swift */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		78BF2C5627BEAA6100DD818F /* WorkSummary */ = {
+			isa = PBXGroup;
+			children = (
+				78B5E43B27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift */,
+				78F8D34327BE426900EF346C /* WorkSummaryListSpec.swift */,
+			);
+			path = WorkSummary;
+			sourceTree = "<group>";
+		};
+		78BF2C5727BEAA6B00DD818F /* Education Details */ = {
+			isa = PBXGroup;
+			children = (
+				78B5E43927BE16B4006280D2 /* EducationDetailEditorSpec.swift */,
+				78BF2C5B27BEAACF00DD818F /* EducationListSpec.swift */,
+			);
+			path = "Education Details";
+			sourceTree = "<group>";
+		};
+		78BF2C5827BEAA9700DD818F /* Project Details */ = {
+			isa = PBXGroup;
+			children = (
+				78B5E43527BE1026006280D2 /* ProjectDetailEditorSpec.swift */,
+				78BF2C5D27BEB2B200DD818F /* ProjectListSpec.swift */,
+			);
+			path = "Project Details";
+			sourceTree = "<group>";
+		};
+		78BF2C5927BEAAA600DD818F /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				78B5E44127BE3087006280D2 /* ResumeEditorSpec.swift */,
+				78B5E43F27BE305A006280D2 /* ResumeContentSpec.swift */,
+				785B20C827BEBF420006DB4F /* ResumeListSpec.swift */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
+		78BF2C5A27BEAAAF00DD818F /* Personal Details */ = {
+			isa = PBXGroup;
+			children = (
+				785B20CA27BEC91C0006DB4F /* PersonalDetailSpec.swift */,
+			);
+			path = "Personal Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +1067,9 @@
 			packageProductDependencies = (
 				7805814727B6C23C0013F5A3 /* Realm */,
 				7805814927B6C23C0013F5A3 /* RealmSwift */,
+				786E428527BB9FB500EF525A /* Nimble */,
+				786E428827BB9FBE00EF525A /* Quick */,
+				786E428B27BB9FC700EF525A /* IQKeyboardManagerSwift */,
 			);
 			productName = ResumeApp;
 			productReference = 78ACA73627B6C1B2007AC1D1 /* ResumeApp.app */;
@@ -222,6 +1145,9 @@
 			mainGroup = 78ACA72D27B6C1B2007AC1D1;
 			packageReferences = (
 				7805814627B6C23C0013F5A3 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				786E428427BB9FB500EF525A /* XCRemoteSwiftPackageReference "Nimble" */,
+				786E428727BB9FBE00EF525A /* XCRemoteSwiftPackageReference "Quick" */,
+				786E428A27BB9FC700EF525A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 78ACA73727B6C1B2007AC1D1 /* Products */;
 			projectDirPath = "";
@@ -239,8 +1165,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A5104027BD611000DCF489 /* SkillContentTableViewCell.xib in Resources */,
 				78ACA74627B6C1B3007AC1D1 /* LaunchScreen.storyboard in Resources */,
 				78ACA74327B6C1B3007AC1D1 /* Assets.xcassets in Resources */,
+				78A5100227BC1FAC00DCF489 /* EducationDetailTableViewCell.xib in Resources */,
+				78A5104827BD612800DCF489 /* ProjectDetailContentTableViewCell.xib in Resources */,
+				78A50FDD27BBD0D300DCF489 /* EducationEditorViewController.xib in Resources */,
+				78A50FE127BBD0E400DCF489 /* WorkSummaryEditorViewController.xib in Resources */,
+				786E429627BBA59300EF525A /* SkillTableViewCell.xib in Resources */,
+				786E429227BBA58A00EF525A /* SkillsListView.xib in Resources */,
+				786E42C027BBC21800EF525A /* WorkSummaryListView.xib in Resources */,
+				786E427927BB9E0A00EF525A /* ResumeEditorViewController.xib in Resources */,
+				786E42BC27BBC1C600EF525A /* EducationDetailsListView.xib in Resources */,
+				78A5101B27BCC75600DCF489 /* ResumeTableViewCell.xib in Resources */,
+				786E42A727BBA5EE00EF525A /* AddNewContentTableViewCell.xib in Resources */,
+				78A5104427BD611E00DCF489 /* EducationDetailContentTableViewCell.xib in Resources */,
+				786E428327BB9F8C00EF525A /* ResumeContentViewController.xib in Resources */,
+				786E42AE27BBA80000EF525A /* SkillEditorViewController.xib in Resources */,
+				78A5100627BC314900DCF489 /* PersonalDetailsView.xib in Resources */,
+				78A50FE727BBF54600DCF489 /* WorkSummaryTableViewCell.xib in Resources */,
+				786E42B227BBB24600EF525A /* ProjectDetailEditorViewController.xib in Resources */,
+				786E42AA27BBA5EE00EF525A /* DatePickerView.xib in Resources */,
+				786E427227BB9D2600EF525A /* ResumeListViewController.xib in Resources */,
+				78A50FF727BC047E00DCF489 /* ProjectDetailTableViewCell.xib in Resources */,
+				786E42B827BBBC2900EF525A /* ProjectDetailsListView.xib in Resources */,
+				78A5103827BD60D800DCF489 /* WorkSummaryContentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +1214,66 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78ACA73E27B6C1B2007AC1D1 /* ViewController.swift in Sources */,
+				786E425D27BB9C9C00EF525A /* DynamicHeightTableView.swift in Sources */,
+				786E42A927BBA5EE00EF525A /* DatePickerView.swift in Sources */,
+				786E426927BB9CBF00EF525A /* Date.swift in Sources */,
+				78A5102927BCFB1500DCF489 /* ResumeItem.swift in Sources */,
+				78A5103127BD24C600DCF489 /* PersonalDetailModel.swift in Sources */,
+				78A5104727BD612800DCF489 /* ProjectDetailContentTableViewCell.swift in Sources */,
+				786E429127BBA58A00EF525A /* SkillsListView.swift in Sources */,
+				786E42BE27BBC21200EF525A /* WorkSummaryListView.swift in Sources */,
+				786E429927BBA5AD00EF525A /* SkillEditorViewModel.swift in Sources */,
+				78A50FE327BBE42500DCF489 /* WorkSummaryEditorViewModel.swift in Sources */,
+				78A5100827BC37F400DCF489 /* PersonalDetailsViewModel.swift in Sources */,
+				78A5100427BC314300DCF489 /* PersonalDetailsView.swift in Sources */,
+				78A5101227BCB20D00DCF489 /* RealmService.swift in Sources */,
+				786E425E27BB9C9C00EF525A /* NibFileOwnerLoadable.swift in Sources */,
+				78A5101027BCB0D900DCF489 /* ResumeObject.swift in Sources */,
+				78A5100A27BC3EB600DCF489 /* ResumeEditorViewModel.swift in Sources */,
+				78A5102627BCF99300DCF489 /* ProjectDetailObject.swift in Sources */,
+				78A5102427BCF98200DCF489 /* EducationDetailObject.swift in Sources */,
+				78A50FE627BBF54600DCF489 /* WorkSummaryTableViewCell.swift in Sources */,
+				78A5103727BD60D800DCF489 /* WorkSummaryContentTableViewCell.swift in Sources */,
+				78A50FFB27BC0B6700DCF489 /* EducationDetailsListViewModel.swift in Sources */,
+				78A5103F27BD611000DCF489 /* SkillContentTableViewCell.swift in Sources */,
+				78A5101527BCBB1900DCF489 /* ResumeService.swift in Sources */,
+				78A50FF627BC047E00DCF489 /* ProjectDetailTableViewCell.swift in Sources */,
+				78A5102027BCF93A00DCF489 /* WorkSummaryObject.swift in Sources */,
+				78A5101A27BCC75600DCF489 /* ResumeTableViewCell.swift in Sources */,
+				78A50FEE27BBFFA800DCF489 /* ProjectDetailsListViewModel.swift in Sources */,
+				786E42B627BBBB2200EF525A /* ProjectDetailsListView.swift in Sources */,
+				78A5101727BCC64B00DCF489 /* ResumeListViewModel.swift in Sources */,
+				78A5102227BCF97700DCF489 /* SkillObject.swift in Sources */,
+				786E426A27BB9CBF00EF525A /* UITextView.swift in Sources */,
+				78A5100127BC1FAC00DCF489 /* EducationDetailTableViewCell.swift in Sources */,
+				786E42AD27BBA80000EF525A /* SkillEditorViewController.swift in Sources */,
+				786E427127BB9D2600EF525A /* ResumeListViewController.swift in Sources */,
+				78A50FF227BC006200DCF489 /* ProjectDetailEditorViewModel.swift in Sources */,
+				78A50FE027BBD0E400DCF489 /* WorkSummaryEditorViewController.swift in Sources */,
+				786E42BA27BBC1BF00EF525A /* EducationDetailsListView.swift in Sources */,
+				786E426B27BB9CBF00EF525A /* UIView.swift in Sources */,
+				78A50FF927BC0AD000DCF489 /* EducationDetailModel.swift in Sources */,
+				786E42B127BBB24600EF525A /* ProjectDetailEditorViewController.swift in Sources */,
+				786E426827BB9CBF00EF525A /* UIViewController.swift in Sources */,
+				786E425F27BB9C9C00EF525A /* CustomButton.swift in Sources */,
+				78A50FEA27BBF5B600DCF489 /* WorkSummaryModel.swift in Sources */,
+				786E427827BB9E0A00EF525A /* ResumeEditorViewController.swift in Sources */,
 				78ACA73A27B6C1B2007AC1D1 /* AppDelegate.swift in Sources */,
+				786E425C27BB9C9C00EF525A /* Nibbable.swift in Sources */,
+				786E426727BB9CBF00EF525A /* UIColor.swift in Sources */,
+				78A50FF027BC002600DCF489 /* ProjectDetailModel.swift in Sources */,
+				78A50FDC27BBD0D300DCF489 /* EducationEditorViewController.swift in Sources */,
+				78A5104327BD611E00DCF489 /* EducationDetailContentTableViewCell.swift in Sources */,
+				78A50FEC27BBF63100DCF489 /* WorkSummaryListViewModel.swift in Sources */,
+				78A50FFD27BC0BEC00DCF489 /* EducationEditorViewModel.swift in Sources */,
+				786E428227BB9F8C00EF525A /* ResumeContentViewController.swift in Sources */,
 				78ACA73C27B6C1B2007AC1D1 /* SceneDelegate.swift in Sources */,
+				786E42A827BBA5EE00EF525A /* AddNewContentTableViewCell.swift in Sources */,
+				78A5103327BD55BE00DCF489 /* ResumeContentViewModel.swift in Sources */,
+				786E429727BBA59300EF525A /* SkillTableViewCell.swift in Sources */,
+				786E42A627BBA5EE00EF525A /* HUD.swift in Sources */,
+				786E428E27BBA58100EF525A /* SkillsListViewModel.swift in Sources */,
+				786E426627BB9CBF00EF525A /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +1281,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78ACA75127B6C1B3007AC1D1 /* ResumeAppTests.swift in Sources */,
+				78F8D34427BE426900EF346C /* WorkSummaryListSpec.swift in Sources */,
+				78B5E44027BE305A006280D2 /* ResumeContentSpec.swift in Sources */,
+				78BF2C5E27BEB2B200DD818F /* ProjectListSpec.swift in Sources */,
+				785B20CB27BEC91C0006DB4F /* PersonalDetailSpec.swift in Sources */,
+				78B5E43627BE1026006280D2 /* ProjectDetailEditorSpec.swift in Sources */,
+				78B5E43C27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift in Sources */,
+				78A5104A27BDE8EA00DCF489 /* SkillEditorSpec.swift in Sources */,
+				780A1B0327BE8E5100AA6685 /* ResumeServiceSpec.swift in Sources */,
+				78B5E44227BE3087006280D2 /* ResumeEditorSpec.swift in Sources */,
+				78B5E44627BE321D006280D2 /* ResumeMock.swift in Sources */,
+				78B5E44827BE35DA006280D2 /* ResumeServiceMock.swift in Sources */,
+				78BF2C5C27BEAACF00DD818F /* EducationListSpec.swift in Sources */,
+				78B5E43A27BE16B4006280D2 /* EducationDetailEditorSpec.swift in Sources */,
+				780A1B0527BE93D900AA6685 /* SkillListSpec.swift in Sources */,
+				785B20C927BEBF420006DB4F /* ResumeListSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +1459,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S58M2Q6WH3;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ResumeApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) need camera access to take a photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) wants to use your Photo Library to access a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -452,6 +1475,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTEST,
+					"-weak-lXCTestSwiftSupport",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamsnow.ResumeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -468,8 +1496,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S58M2Q6WH3;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ResumeApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) need camera access to take a photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) wants to use your Photo Library to access a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -481,6 +1512,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTEST,
+					"-weak-lXCTestSwiftSupport",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamsnow.ResumeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -615,6 +1651,30 @@
 				kind = branch;
 			};
 		};
+		786E428427BB9FB500EF525A /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		786E428727BB9FBE00EF525A /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		786E428A27BB9FC700EF525A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -627,6 +1687,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7805814627B6C23C0013F5A3 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		786E428527BB9FB500EF525A /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 786E428427BB9FB500EF525A /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		786E428827BB9FBE00EF525A /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 786E428727BB9FBE00EF525A /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		786E428B27BB9FC700EF525A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 786E428A27BB9FC700EF525A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

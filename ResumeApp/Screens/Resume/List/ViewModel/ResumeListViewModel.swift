@@ -12,6 +12,7 @@ protocol ResumeListViewModelOutput {
     var listeningToTableViewReload: (() -> Void)? { get }
     var notFoundDataHandler: (() -> Void)? { get }
     var didSelectResumeHandler: ((IndexPath, ResumeItem) -> Void)? { get }
+    var didDeleteResumeHandler: (() -> Void)? { get }
     
     func numberOfItem(in section: Int) -> Int
     func resume(at indexPath: IndexPath) -> ResumeItem
@@ -40,6 +41,7 @@ final class ResumeListViewModel: ResumeListViewModelInput, ResumeListViewModelOu
     var listeningToTableViewReload: (() -> Void)?
     var didSelectResumeHandler: ((IndexPath, ResumeItem) -> Void)?
     var notFoundDataHandler: (() -> Void)?
+    var didDeleteResumeHandler: (() -> Void)?
     
     func numberOfItem(in section: Int) -> Int {
         return resumeList.count
@@ -56,7 +58,9 @@ final class ResumeListViewModel: ResumeListViewModelInput, ResumeListViewModelOu
     
     func delete(at indexPath: IndexPath) {
         let id = resume(at: indexPath).id
-        service.deleteResume(withId: id, nil)
+        service.deleteResume(withId: id) { [weak self] in
+            self?.didDeleteResumeHandler?()
+        }
     }
     
     func fetchResumeList() {

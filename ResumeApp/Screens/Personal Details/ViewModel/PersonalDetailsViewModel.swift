@@ -94,58 +94,50 @@ final class PersonalDetailsViewModel: PersonalDetailsViewModelInput, PersonalDet
     }
     
     func setResumeTitle(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            resumeTitle = text
         }
-        resumeTitle = text
     }
     
     func setFirstname(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            firstname = text
         }
-        firstname = text
     }
     
     func setLastname(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            lastname = text
         }
-        lastname = text
     }
     
     func setMobileNumber(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            mobileNumber = text
         }
-        mobileNumber = text
     }
     
     func setEmailAddress(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            emailAddress = text
         }
-        emailAddress = text
     }
     
     func setResidenceAddress(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            residenceAddress = text
         }
-        residenceAddress = text
     }
     
     func setCareerObject(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            careerObject = text
         }
-        careerObject = text
     }
     
     func setTotalYearsOfExperience(text: String?) {
-        guard let text = text else {
-            return
+        if let text = text {
+            totalYearsOfExperience = text
         }
-        totalYearsOfExperience = text
     }
 }

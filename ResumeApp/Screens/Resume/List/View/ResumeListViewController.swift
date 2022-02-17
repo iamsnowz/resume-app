@@ -93,6 +93,10 @@ extension ResumeListViewController {
             self?.notFoundLabel.isHidden = false
             self?.tableView.isHidden = true
         }
+        
+        viewModel.didDeleteResumeHandler = {
+            // do something
+        }
     }
 }
 

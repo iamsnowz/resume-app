@@ -26,7 +26,6 @@ class ResumeServiceMock: ResumeServiceProtocol {
     func observe(completion: ((Result<[ResumeItem], ServiceError>) -> Void)?) {
         if isSuccess {
             let list: [ResumeItem] = [
-                ResumeMock.resumeItemMock(),
                 ResumeMock.resumeItemMock()
             ]
             completion?(.success(list))

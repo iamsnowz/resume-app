@@ -18,8 +18,8 @@ class ResumeServiceSpec: QuickSpec {
                 service.observe { result in
                     switch result {
                     case .success(let model):
-                        it("should get count is 2 ") {
-                            expect(model.count).toEventually(equal(2))
+                        it("should get count is 1") {
+                            expect(model.count).toEventually(equal(1))
                         }
                     case .failure:
                         break
@@ -34,7 +34,7 @@ class ResumeServiceSpec: QuickSpec {
                     case .success:
                        break
                     case .failure(let error):
-                        it("should get count is 2 ") {
+                        it("should show not found data") {
                             expect(error).toEventually(equal(.notFoundData))
                         }
                     }

@@ -23,16 +23,19 @@ final class SkillsListView: UIView, NibFileOwnerLoadable {
         super.init(frame: frame)
         loadNibContent()
         setup()
-        bindingViewModel()
-        setupTableView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadNibContent()
         setup()
-        bindingViewModel()
+    }
+    
+    func setDefaultValue(skills: [String]?) {
+        viewModel = SkillsListViewModel(defaultValue: skills)
         setupTableView()
+        bindingViewModel()
+        viewModel.viewDidLoad()
     }
     
     // MARK: - Setup
@@ -54,10 +57,7 @@ final class SkillsListView: UIView, NibFileOwnerLoadable {
 // MARK: - Binding ViewModel
 extension SkillsListView {
     private func bindingViewModel() {
-        viewModel = SkillsListViewModel()
-        
         // output
-        
         viewModel.listeningToTableViewReloadHandler = { [weak self] in
             self?.tableView.reloadData()
         }

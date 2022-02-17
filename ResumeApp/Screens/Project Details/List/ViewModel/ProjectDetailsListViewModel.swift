@@ -25,12 +25,17 @@ protocol ProjectDetailsListViewModelOutput {
 }
 
 protocol ProjectDetailsListViewModelInput {
+    func viewDidLoad()
     func updateProjectDetailItem(isUpdate: Bool, at indexPath: IndexPath?, projectDetailItem: ProjectDetailItem)
     func selectedProjectDetailItem(at indexPath: IndexPath)
     func deleteProjectItem(at indexPath: IndexPath)
 }
 
 final class ProjectDetailsListViewModel: ProjectDetailsListViewModelInput, ProjectDetailsListViewModelOutput {
+    private let defaultValue: [ProjectDetailItem]?
+    init(defaultValue: [ProjectDetailItem]?) {
+        self.defaultValue = defaultValue
+    }
     
     private var projectDetailItemsList: [ProjectDetailItem] = [] {
         didSet {
@@ -62,6 +67,12 @@ final class ProjectDetailsListViewModel: ProjectDetailsListViewModelInput, Proje
     }
     
     // MARK: - Input
+    func viewDidLoad() {
+        if let defaultValue = defaultValue {
+            projectDetailItemsList = defaultValue
+        }
+    }
+    
     func updateProjectDetailItem(isUpdate: Bool, at indexPath: IndexPath?, projectDetailItem: ProjectDetailItem) {
         if isUpdate, let row = indexPath?.row {
             projectDetailItemsList[row] = projectDetailItem

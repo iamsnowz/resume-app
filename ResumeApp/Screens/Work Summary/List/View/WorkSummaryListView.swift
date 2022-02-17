@@ -23,15 +23,19 @@ final class WorkSummaryListView: UIView, NibFileOwnerLoadable {
         super.init(frame: frame)
         loadNibContent()
         setup()
-        bindingViewModel()
-        setupTableView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadNibContent()
         setup()
+    }
+    
+    func setDefaultValue(workSummary: [WorkSummaryItem]?) {
+        viewModel = WorkSummaryListViewModel(defaultValue: workSummary)
+        setupTableView()
         bindingViewModel()
+        viewModel.viewDidLoad()
         setupTableView()
     }
     
@@ -54,8 +58,6 @@ final class WorkSummaryListView: UIView, NibFileOwnerLoadable {
 // MARK: - Binding ViewModel
 extension WorkSummaryListView {
     private func bindingViewModel() {
-        viewModel = WorkSummaryListViewModel()
-        
         // output
         viewModel.listeningToTableViewReloadHandler = { [weak self] in
             self?.tableView.reloadData()

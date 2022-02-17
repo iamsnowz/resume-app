@@ -21,7 +21,7 @@ final class ResumeEditorViewController: UIViewController {
     // Project Details
     @IBOutlet private var projectDetailsListView: ProjectDetailsListView!
     // Button
-    @IBOutlet private var createButton: CustomButton!
+    @IBOutlet private var actionButton: CustomButton!
     // MARK: - Properties
     private var viewModel: ResumeEditorViewModel!
     
@@ -36,6 +36,8 @@ final class ResumeEditorViewController: UIViewController {
         setupProjectDetailsListView()
         setupCreateButton()
         bindingViewModel()
+        
+        viewModel.viewDidLoad()
     }
 
     static func create(withDefaultValue resume: ResumeItem?) -> ResumeEditorViewController {
@@ -48,7 +50,7 @@ final class ResumeEditorViewController: UIViewController {
     
     // MARK: - Action
     @IBAction private func createTapped() {
-        viewModel.create()
+        viewModel.createOrUpdate()
     }
     
     // MARK: - Setup
@@ -78,14 +80,18 @@ final class ResumeEditorViewController: UIViewController {
     }
     
     private func setupCreateButton() {
-        createButton.backgroundColor = .theme.accent
-        createButton.setTitle("Create", for: .normal)
-        createButton.setTitleColor(.white, for: .normal)
-        createButton.setTitleColor(.white, for: .disabled)
-        createButton.setBackgroundColor(.theme.accent, for: .normal)
-        createButton.setBackgroundColor(.theme.accent?.withAlphaComponent(0.3), for: .disabled)
-        createButton.setBorder()
-        createButton.isEnabled = false
+        setupActionButton(title: "Create")
+    }
+    
+    private func setupActionButton(title: String) {
+        actionButton.backgroundColor = .theme.accent
+        actionButton.setTitle(title, for: .normal)
+        actionButton.setTitleColor(.white, for: .normal)
+        actionButton.setTitleColor(.white, for: .disabled)
+        actionButton.setBackgroundColor(.theme.accent, for: .normal)
+        actionButton.setBackgroundColor(.theme.accent?.withAlphaComponent(0.3), for: .disabled)
+        actionButton.setBorder()
+        actionButton.isEnabled = false
     }
     
 }
@@ -95,10 +101,20 @@ extension ResumeEditorViewController {
     private func bindingViewModel() {
         // output
         viewModel.shouldEnableButtonHandler = { [weak self] isEnabled in
-            self?.createButton.isEnabled = isEnabled
+            self?.actionButton.isEnabled = isEnabled
         }
         
-        viewModel.didCreateFinishHandler = { [weak self] in
+        viewModel.isUpdateResumeHandler = { [weak self] defaultValue in
+            self?.title = "Updating Resume"
+            self?.personalDetailsView.setDefaultValue(personalDetailItem: defaultValue.personalDetail)
+            self?.skillsListView.setDefaultValue(skills: defaultValue.skills)
+            self?.workSummaryListView.setDefaultValue(workSummary: defaultValue.workSummary)
+            self?.educationDetailsListView.setDefaultValue(educationDetail: defaultValue.educationDetail)
+            self?.projectDetailsListView.setDefaultValue(projectDetail: defaultValue.projectDetail)
+            self?.setupActionButton(title: "Update")
+        }
+        
+        viewModel.didCreateOrUpdateFinishHandler = { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
         

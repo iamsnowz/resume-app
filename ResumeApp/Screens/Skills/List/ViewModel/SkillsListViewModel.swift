@@ -25,12 +25,18 @@ protocol SkillsListViewModelOutput {
 }
 
 protocol SkillsListViewModellInput {
+    func viewDidLoad()
+    
     func updateSkill(isUpdate: Bool, at indexPath: IndexPath?, text: String)
     func selectedSkill(at indexPath: IndexPath)
     func deleteSkill(at indexPath: IndexPath)
 }
 
 final class SkillsListViewModel: SkillsListViewModellInput, SkillsListViewModelOutput {
+    private let defaultValue: [String]?
+    init(defaultValue: [String]?) {
+        self.defaultValue = defaultValue
+    }
     
     private var skillsList: [String] = [] {
         didSet {
@@ -62,6 +68,12 @@ final class SkillsListViewModel: SkillsListViewModellInput, SkillsListViewModelO
     }
     
     // MARK: - Input
+    func viewDidLoad() {
+        if let defaultValue = defaultValue {
+            skillsList = defaultValue
+        }
+    }
+    
     func updateSkill(isUpdate: Bool, at indexPath: IndexPath? = nil, text: String) {
         if isUpdate, let row = indexPath?.row {
             skillsList[row] = text

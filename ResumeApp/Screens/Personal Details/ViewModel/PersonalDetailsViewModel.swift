@@ -10,12 +10,14 @@ import UIKit
 protocol PersonalDetailsViewModelOutput {
     var didOpenCameraOrPhotoLibrary: (() -> Void)? { get }
     var didUserFinishInputData: ((PersonalDetailItem) -> Void)? { get }
+    var isUpdatePersonalDetailHandler: ((PersonalDetailItem) -> Void)? { get }
 }
 
 protocol PersonalDetailsViewModelInput {
+    func viewDidLoad()
     func openCameraOrPhotoLibrary()
     
-    func setProfileImage(image: UIImage?)
+    func setProfileImage(data: Data?)
     func setResumeTitle(text: String?)
     func setFirstname(text: String?)
     func setLastname(text: String?)
@@ -27,6 +29,13 @@ protocol PersonalDetailsViewModelInput {
 }
 
 final class PersonalDetailsViewModel: PersonalDetailsViewModelInput, PersonalDetailsViewModelOutput {
+    private let defaultValue: PersonalDetailItem?
+    
+    init(defaultValue: PersonalDetailItem?) {
+        self.defaultValue = defaultValue
+    }
+    
+    private var isUpdate: Bool = false
     
     private var profileImageData: Data? { didSet { evaluateData() } }
     private var resumeTitle: String = "" { didSet { evaluateData() } }
@@ -48,7 +57,7 @@ final class PersonalDetailsViewModel: PersonalDetailsViewModelInput, PersonalDet
                                                     mobileNumber: mobileNumber,
                                                     emailAddress: emailAddress,
                                                     residenceAddress: residenceAddress,
-                                                    careerObject: careerObject,
+                                                    careerObjective: careerObject,
                                                     totalYearsOfExperience: totalYearsOfExperience)
             didUserFinishInputData?(personalDetail)
         }   
@@ -57,14 +66,31 @@ final class PersonalDetailsViewModel: PersonalDetailsViewModelInput, PersonalDet
     // MARK: - Output
     var didOpenCameraOrPhotoLibrary: (() -> Void)?
     var didUserFinishInputData: ((PersonalDetailItem) -> Void)?
+    var isUpdatePersonalDetailHandler: ((PersonalDetailItem) -> Void)?
     
     // MARK: - Input
+    func viewDidLoad() {
+        isUpdate = defaultValue != nil
+        if isUpdate, let defaultValue = defaultValue {
+            setProfileImage(data: defaultValue.profileImageData)
+            setResumeTitle(text: defaultValue.resumeTitle)
+            setFirstname(text: defaultValue.firstname)
+            setLastname(text: defaultValue.lastname)
+            setMobileNumber(text: defaultValue.mobileNumber)
+            setEmailAddress(text: defaultValue.emailAddress)
+            setResidenceAddress(text: defaultValue.residenceAddress)
+            setCareerObject(text: defaultValue.careerObjective)
+            setTotalYearsOfExperience(text: defaultValue.totalYearsOfExperience)
+            isUpdatePersonalDetailHandler?(defaultValue)
+        }
+    }
+    
     func openCameraOrPhotoLibrary() {
         didOpenCameraOrPhotoLibrary?()
     }
     
-    func setProfileImage(image: UIImage?) {
-        profileImageData = image?.pngData()
+    func setProfileImage(data: Data?) {
+        profileImageData = data
     }
     
     func setResumeTitle(text: String?) {

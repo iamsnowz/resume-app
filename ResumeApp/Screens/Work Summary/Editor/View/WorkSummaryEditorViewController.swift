@@ -109,7 +109,7 @@ final class WorkSummaryEditorViewController: UIViewController {
     // MARK: - Update
     func updateDateLabel(label: UILabel?, date: Date) {
         label?.text = date.asDateStringWithMMMYYYY()
-        label?.textColor =  UIColor(named: "LabeLColor")
+        label?.textColor =  UIColor(named: "LabelColor")
     }
 
 }

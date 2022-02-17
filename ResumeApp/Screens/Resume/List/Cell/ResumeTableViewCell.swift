@@ -36,6 +36,6 @@ class ResumeTableViewCell: UITableViewCell, Nibbable {
     
     // MARK: - Update
     func display(resume: ResumeItem) {
-        nameLabel.text = resume.resumeTitle
+        nameLabel.text = resume.personalDetail.resumeTitle
     }
 }

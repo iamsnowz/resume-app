@@ -9,11 +9,13 @@ import UIKit
 
 protocol ResumeEditorViewModelOutput {
     var shouldEnableButtonHandler: ((Bool) -> Void)? { get }
-    var didCreateFinishHandler: (() -> Void)? { get }
+    var isUpdateResumeHandler: ((ResumeItem) -> Void)? { get}
+    var didCreateOrUpdateFinishHandler: (() -> Void)? { get }
 }
 
 protocol ResumeEditorViewModelInput {
-    func create()
+    func viewDidLoad()
+    func createOrUpdate()
     func setPersonalDetail(personanDetail: PersonalDetailItem)
     func setWorkSummary(workSummary: [WorkSummaryItem])
     func setSkills(skills: [String])
@@ -22,12 +24,17 @@ protocol ResumeEditorViewModelInput {
 }
 
 final class ResumeEditorViewModel: ResumeEditorViewModelInput, ResumeEditorViewModelOutput {
+    
     private let defaultValue: ResumeItem?
-    private let service: ResumeService
-    init(defaultValue: ResumeItem?, service: ResumeService) {
+    private let service: ResumeServiceProtocol
+    
+    init(defaultValue: ResumeItem?, service: ResumeServiceProtocol) {
         self.defaultValue = defaultValue
         self.service = service
     }
+    
+    private var isUpdate: Bool = false
+    
     private var personalDetail: PersonalDetailItem? {
         didSet {
             evaluateData()
@@ -64,9 +71,22 @@ final class ResumeEditorViewModel: ResumeEditorViewModelInput, ResumeEditorViewM
     
     // MARK: - Output
     var shouldEnableButtonHandler: ((Bool) -> Void)?
-    var didCreateFinishHandler: (() -> Void)?
+    var isUpdateResumeHandler: ((ResumeItem) -> Void)?
+    var didCreateOrUpdateFinishHandler: (() -> Void)?
     
     // MARK: - Input
+    func viewDidLoad() {
+        isUpdate = defaultValue != nil
+        if isUpdate, let defaultValue = defaultValue {
+            setPersonalDetail(personanDetail: defaultValue.personalDetail)
+            setWorkSummary(workSummary: defaultValue.workSummary)
+            setSkills(skills: defaultValue.skills)
+            setEducationDetails(educationDetails: defaultValue.educationDetail)
+            setProjectDetails(projectDetails: defaultValue.projectDetail)
+            isUpdateResumeHandler?(defaultValue)
+        }
+    }
+    
     func setPersonalDetail(personanDetail: PersonalDetailItem) {
         self.personalDetail = personanDetail
     }
@@ -95,29 +115,32 @@ final class ResumeEditorViewModel: ResumeEditorViewModelInput, ResumeEditorViewM
         }
     }
     
-    func create() {
+    func createOrUpdate() {
         guard let personalDetail = personalDetail else {
             return
         }
-
-        let uuid = UUID().uuidString
-        let resumeItem = ResumeItem(id: uuid,
-                                    profileImageData: personalDetail.profileImageData,
-                                    resumeTitle: personalDetail.resumeTitle,
-                                    firstname: personalDetail.firstname,
-                                    lastname: personalDetail.lastname,
-                                    mobileNumber: personalDetail.mobileNumber,
-                                    emailAddress: personalDetail.emailAddress,
-                                    residenceAddress: personalDetail.residenceAddress,
-                                    careerObjective: personalDetail.careerObject,
-                                    totalYearsOfExperience: personalDetail.totalYearsOfExperience,
-                                    workSummary: workSummaryItemsList,
-                                    skills: skillsList,
-                                    educationDetail: educationDetailItemsList,
-                                    projectDetail: projectDetailItemsList)
-        
-        service.createResume(withResumeItem: resumeItem) { [weak self] in
-            self?.didCreateFinishHandler?()
+        if isUpdate, let defaultValue = defaultValue {
+            let resumeItem = ResumeItem(id: defaultValue.id,
+                                        personalDetail: personalDetail,
+                                        workSummary: workSummaryItemsList,
+                                        skills: skillsList,
+                                        educationDetail: educationDetailItemsList,
+                                        projectDetail: projectDetailItemsList)
+            service.createOrUpdate(withResumeItem: resumeItem) { [weak self] in
+                self?.didCreateOrUpdateFinishHandler?()
+            }
+        } else {
+            let uuid = UUID().uuidString
+            let resumeItem = ResumeItem(id: uuid,
+                                        personalDetail: personalDetail,
+                                        workSummary: workSummaryItemsList,
+                                        skills: skillsList,
+                                        educationDetail: educationDetailItemsList,
+                                        projectDetail: projectDetailItemsList)
+            service.createOrUpdate(withResumeItem: resumeItem) { [weak self] in
+                self?.didCreateOrUpdateFinishHandler?()
+            }
         }
     }
+    
 }

@@ -25,12 +25,18 @@ protocol WorkSummaryListViewModelOutput {
 }
 
 protocol WorkSummaryListViewModelInput {
+    func viewDidLoad()
     func updateWorkItem(isUpdate: Bool, at indexPath: IndexPath?, workItem: WorkSummaryItem)
     func selectedWorkItem(at indexPath: IndexPath)
     func deleteWorkItem(at indexPath: IndexPath)
 }
 
 final class WorkSummaryListViewModel: WorkSummaryListViewModelInput, WorkSummaryListViewModelOutput {
+    private let defaultValue: [WorkSummaryItem]?
+    
+    init(defaultValue: [WorkSummaryItem]?) {
+        self.defaultValue = defaultValue
+    }
     
     private var workItemsList: [WorkSummaryItem] = [] {
         didSet {
@@ -62,6 +68,12 @@ final class WorkSummaryListViewModel: WorkSummaryListViewModelInput, WorkSummary
     }
     
     // MARK: - Input
+    func viewDidLoad() {
+        if let defaultValue = defaultValue {
+            workItemsList = defaultValue
+        }
+    }
+    
     func updateWorkItem(isUpdate: Bool, at indexPath: IndexPath?, workItem: WorkSummaryItem) {
         if isUpdate, let row = indexPath?.row {
             workItemsList[row] = workItem

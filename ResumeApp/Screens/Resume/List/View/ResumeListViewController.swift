@@ -37,7 +37,7 @@ final class ResumeListViewController: UIViewController {
     // MARK: - Action
     @objc
     private func createNewResumeTapped() {
-        let editorView = ResumeEditorViewController.create()
+        let editorView = ResumeEditorViewController.create(withDefaultValue: nil)
         navigationController?.pushViewController(editorView, animated: true)
     }
     
@@ -74,7 +74,7 @@ extension ResumeListViewController {
                 let contentView = ResumeContentViewController.create(withResume: selectedResume)
                 self?.navigationController?.pushViewController(contentView, animated: true)
             }, editAction: { _ in
-                let editorView = ResumeEditorViewController.create()
+                let editorView = ResumeEditorViewController.create(withDefaultValue: selectedResume)
                 self?.navigationController?.pushViewController(editorView, animated: true)
             }, deleteAction: { _ in
                 self?.viewModel.delete(at: indexPath)

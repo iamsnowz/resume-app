@@ -12,57 +12,48 @@ enum ServiceError: Error {
     case notFoundData
 }
 protocol ResumeServiceProtocol {
-    func createResume(withResumeItem model: ResumeItem, completion: (() -> Void)?)
+    func createOrUpdate(withResumeItem model: ResumeItem, completion: (() -> Void)?)
     func deleteResume(withId id: String)
     func getResumeList(completion: ((Result<Results<ResumeObject>, ServiceError>) -> Void)?)
-    
 }
 
 final class ResumeService: ResumeServiceProtocol {
     var notificationToken: NotificationToken?
     
-    func createResume(withResumeItem item: ResumeItem, completion: (() -> Void)?) {
-        let workSerializer = WorkSummarySerializer()
-        workSerializer.serializeWith(resumeId: item.id, workSummary: item.workSummary)
+    func createOrUpdate(withResumeItem model: ResumeItem, completion: (() -> Void)?) {
+        let workManager = WorkSummaryObjectManager()
+        workManager.createOrUpdate(resumeId: model.id, workSummary: model.workSummary)
         
-        let skillSerializer = SkillSerializer()
-        skillSerializer.serializeWith(resumeId: item.id, skills: item.skills)
+        let skillManager = SkillObjectManager()
+        skillManager.createOrUpdate(resumeId: model.id, skills: model.skills)
         
-        let educationDetailSerializer = EducationDetailSerializer()
-        educationDetailSerializer.serializeWith(resumeId: item.id, educationDetail: item.educationDetail)
+        let educationDetailManager = EducationDetailObjectManager()
+        educationDetailManager.createOrUpdate(resumeId: model.id, educationDetail: model.educationDetail)
         
-        let projectDetailSerializer = ProjectDetailSerializer()
-        projectDetailSerializer.serializeWith(resumeId: item.id, projectDetail: item.projectDetail)
+        let projectDetailManager = ProjectDetailObjectManager()
+        projectDetailManager.createOrUpdate(resumeId: model.id, projectDetail: model.projectDetail)
         
-        let resumeSerializer = ResumeSerializer()
-        resumeSerializer.serializedObjectWith(resumeId: item.id, resumeItem: item)
-  
+        let resumeManager = ResumeObjectManager()
+        resumeManager.createOrUpdate(resumeItem: model)
         completion?()
     }
     
     func deleteResume(withId id: String) {
-        if let resume = RealmService.shared.realm.object(ofType: ResumeObject.self, forPrimaryKey: id) {
-            let workSummary = RealmService.shared.realm.objects(WorkSummaryObject.self).where { $0.resumeId == id }
-            let skills = RealmService.shared.realm.objects(SkillObject.self).where { $0.resumeId == id }
-            let educationDetail = RealmService.shared.realm.objects(EducationDetailObject.self).where { $0.resumeId == id }
-            let projectDetail = RealmService.shared.realm.objects(ProjectDetailObject.self).where { $0.resumeId == id }
-            for object in workSummary {
-                RealmService.shared.deleteObjects(objs: object)
-            }
-            for object in skills {
-                RealmService.shared.deleteObjects(objs: object)
-            }
-            for object in educationDetail {
-                RealmService.shared.deleteObjects(objs: object)
-            }
-            for object in projectDetail {
-                RealmService.shared.deleteObjects(objs: object)
-            }
-            RealmService.shared.deleteObjects(objs: resume)
-        }
+        let workManager = WorkSummaryObjectManager()
+        let skillManager = SkillObjectManager()
+        let educationDetailManager = EducationDetailObjectManager()
+        let projectDetailManager = ProjectDetailObjectManager()
+        let resumeManager = ResumeObjectManager()
+        
+        workManager.delete(withId: id)
+        skillManager.delete(withId: id)
+        educationDetailManager.delete(withId: id)
+        projectDetailManager.delete(withId: id)
+        resumeManager.delete(withId: id)
     }
     
     func getResumeList(completion: ((Result<Results<ResumeObject>, ServiceError>) -> Void)?) {
+        notificationToken?.invalidate()
         let objects = RealmService.shared.realm.objects(ResumeObject.self)
         notificationToken = objects.observe { change in
             completion?(.success(objects))

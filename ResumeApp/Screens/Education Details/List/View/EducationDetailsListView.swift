@@ -23,16 +23,19 @@ final class EducationDetailsListView: UIView, NibFileOwnerLoadable {
         super.init(frame: frame)
         loadNibContent()
         setup()
-        bindingViewModel()
-        setupTableView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadNibContent()
         setup()
-        bindingViewModel()
+    }
+    
+    func setDefaultValue(educationDetail: [EducationDetailItem]?) {
+        viewModel = EducationDetailsListViewModel(defaultValue: educationDetail)
         setupTableView()
+        bindingViewModel()
+        viewModel.viewDidLoad()
     }
     
     // MARK: - Setup
@@ -54,8 +57,6 @@ final class EducationDetailsListView: UIView, NibFileOwnerLoadable {
 // MARK: - Binding ViewModel
 extension EducationDetailsListView {
     private func bindingViewModel() {
-        viewModel = EducationDetailsListViewModel()
-        
         // output
         viewModel.listeningToTableViewReloadHandler = { [weak self] in
             self?.tableView.reloadData()

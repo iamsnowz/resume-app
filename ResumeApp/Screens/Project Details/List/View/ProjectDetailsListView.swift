@@ -23,16 +23,19 @@ final class ProjectDetailsListView: UIView, NibFileOwnerLoadable {
         super.init(frame: frame)
         loadNibContent()
         setup()
-        bindingViewModel()
-        setupTableView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadNibContent()
         setup()
-        bindingViewModel()
+    }
+    
+    func setDefaultValue(projectDetail: [ProjectDetailItem]?) {
+        viewModel = ProjectDetailsListViewModel(defaultValue: projectDetail)
         setupTableView()
+        bindingViewModel()
+        viewModel.viewDidLoad()
     }
     
     // MARK: - Setup
@@ -54,8 +57,6 @@ final class ProjectDetailsListView: UIView, NibFileOwnerLoadable {
 // MARK: - Binding ViewModel
 extension ProjectDetailsListView {
     private func bindingViewModel() {
-        viewModel = ProjectDetailsListViewModel()
-        
         // output
         
         viewModel.listeningToTableViewReloadHandler = { [weak self] in

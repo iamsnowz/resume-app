@@ -33,14 +33,12 @@ final class PersonalDetailsView: UIView, NibFileOwnerLoadable {
     private var imagePickerController = UIImagePickerController()
     
     var contentView: UIView!
-    
     var didUserFinishInputData: ((PersonalDetailItem) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNibContent()
         setup()
-        bindingViewModel()
         setupProfileImageView()
         setupTextField()
         setupTextView()
@@ -50,10 +48,15 @@ final class PersonalDetailsView: UIView, NibFileOwnerLoadable {
         super.init(coder: coder)
         loadNibContent()
         setup()
-        bindingViewModel()
         setupProfileImageView()
         setupTextField()
         setupTextView()
+    }
+    
+    func setDefaultValue(personalDetailItem: PersonalDetailItem?) {
+        viewModel = PersonalDetailsViewModel(defaultValue: personalDetailItem)
+        bindingViewModel()
+        viewModel.viewDidLoad()
     }
     
     // MARK: - Action
@@ -142,13 +145,18 @@ final class PersonalDetailsView: UIView, NibFileOwnerLoadable {
         careerObjectTextView.setBorder()
         careerObjectTextView.setPadding()
     }
+    
+    private func updateProfileImage(data: Data?) {
+        guard let data = data else { return }
+        profileImageView.image = UIImage(data: data )
+        cameraPhotoLibraryButton.setTitle("", for: .normal)
+        viewModel.setProfileImage(data: data)
+    }
 }
 
 // MARK: - Binding ViewModel
 extension PersonalDetailsView {
     private func bindingViewModel() {
-        viewModel = PersonalDetailsViewModel()
-     
         // output
         viewModel.didOpenCameraOrPhotoLibrary = { [weak self] in 
             self?.openCameraPhotoLibraryAlertSheet()
@@ -156,6 +164,18 @@ extension PersonalDetailsView {
         
         viewModel.didUserFinishInputData = { [weak self] personalDetail  in
             self?.didUserFinishInputData?(personalDetail)
+        }
+        
+        viewModel.isUpdatePersonalDetailHandler = { [weak self] defaultValue in
+            self?.updateProfileImage(data: defaultValue.profileImageData)
+            self?.resumeTitleTextField.text = defaultValue.resumeTitle
+            self?.firstnameTextField.text = defaultValue.firstname
+            self?.lastnameTextField.text = defaultValue.lastname
+            self?.mobileNumberTextField.text = defaultValue.mobileNumber
+            self?.emailTextField.text = defaultValue.emailAddress
+            self?.residenceAddressTextView.text = defaultValue.residenceAddress
+            self?.careerObjectTextView.text = defaultValue.careerObjective
+            self?.totalYearsOfExperienceTextField.text = defaultValue.totalYearsOfExperience
         }
     }
     
@@ -200,9 +220,7 @@ extension PersonalDetailsView: UITextViewDelegate {
 extension PersonalDetailsView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as? UIImage
-        profileImageView.image = image
-        cameraPhotoLibraryButton.setTitle("", for: .normal)
-        viewModel.setProfileImage(image: image)
+        updateProfileImage(data: image?.pngData())
         picker.dismiss(animated: true, completion: nil)
     }
 }

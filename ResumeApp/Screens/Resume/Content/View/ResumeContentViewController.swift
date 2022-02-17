@@ -70,15 +70,15 @@ extension ResumeContentViewController{
     private func bindingViewModel() {
         // output
         viewModel.displayResumeHandler = { [weak self] resume in
-            self?.title = resume.resumeTitle
-            self?.profileImageView.image = UIImage(data: resume.profileImageData ?? Data())
-            self?.firstnameLabel.text = resume.firstname
-            self?.lastnameLabel.text = resume.lastname
-            self?.mobileNumberLabel.text = resume.mobileNumber
-            self?.emailAddressLabel.text = resume.emailAddress
-            self?.residenceAddressLabel.text = resume.residenceAddress
-            self?.careerObjectLabel.text = resume.careerObjective
-            self?.totalYearsOfExperienceLabel.text = resume.totalYearsOfExperience
+            self?.title = resume.personalDetail.resumeTitle
+            self?.profileImageView.image = UIImage(data: resume.personalDetail.profileImageData ?? Data())
+            self?.firstnameLabel.text = resume.personalDetail.firstname
+            self?.lastnameLabel.text = resume.personalDetail.lastname
+            self?.mobileNumberLabel.text = resume.personalDetail.mobileNumber
+            self?.emailAddressLabel.text = resume.personalDetail.emailAddress
+            self?.residenceAddressLabel.text = resume.personalDetail.residenceAddress
+            self?.careerObjectLabel.text = resume.personalDetail.careerObjective
+            self?.totalYearsOfExperienceLabel.text = resume.personalDetail.totalYearsOfExperience
             self?.tableView.reloadData()
         }
     }

@@ -15,6 +15,6 @@ struct PersonalDetailItem {
     let mobileNumber: String
     let emailAddress: String
     let residenceAddress: String
-    let careerObject: String
+    let careerObjective: String
     let totalYearsOfExperience: String
 }

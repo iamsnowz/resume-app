@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumeEditorViewController" customModule="ResumeApp" customModuleProvider="target">
             <connections>
-                <outlet property="createButton" destination="4Qv-dY-RrS" id="Btg-1J-1y3"/>
+                <outlet property="actionButton" destination="4Qv-dY-RrS" id="Btg-1J-1y3"/>
                 <outlet property="educationDetailsListView" destination="ONM-YM-qG6" id="8bQ-02-sbd"/>
                 <outlet property="personalDetailsView" destination="bMp-rb-tyc" id="cH4-Yn-URe"/>
                 <outlet property="projectDetailsListView" destination="q3K-vo-6H5" id="VTm-Jf-a3h"/>

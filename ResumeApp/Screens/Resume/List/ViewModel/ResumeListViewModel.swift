@@ -71,6 +71,15 @@ final class ResumeListViewModel: ResumeListViewModelInput, ResumeListViewModelOu
     private func prepareData(results: Results<ResumeObject>) {
         var resumeList: [ResumeItem] = []
         for resumeObject in results {
+            let personalDetail = PersonalDetailItem(profileImageData: resumeObject.profileImageData,
+                                                    resumeTitle: resumeObject.resumeTitle,
+                                                    firstname: resumeObject.firstname,
+                                                    lastname: resumeObject.lastname,
+                                                    mobileNumber: resumeObject.mobileNumber,
+                                                    emailAddress: resumeObject.emailAddress,
+                                                    residenceAddress: resumeObject.residenceAddress,
+                                                    careerObjective: resumeObject.careerObjective,
+                                                    totalYearsOfExperience: resumeObject.totalYearsOfExperience)
             let workSummary: [WorkSummaryItem] = RealmService.shared.realm.objects(WorkSummaryObject.self).where {
                 $0.resumeId == resumeObject.id
             }.map { WorkSummaryItem(company: $0.companyName, startDate: $0.startDate, endDate: $0.endDate) }
@@ -88,16 +97,11 @@ final class ResumeListViewModel: ResumeListViewModelInput, ResumeListViewModelOu
             }.map { ProjectDetailItem(projectName: $0.projectName, teamSize: $0.teamSize, projectSummary: $0.projectSummary, technologyUsed: $0.technologyUsed, role: $0.role) }
             
             resumeList.append(ResumeItem(id: resumeObject.id,
-                                         profileImageData: resumeObject.profileImageData,
-                                         resumeTitle: resumeObject.resumeTitle,
-                                         firstname: resumeObject.firstname,
-                                         lastname: resumeObject.lastname,
-                                         mobileNumber: resumeObject.mobileNumber,
-                                         emailAddress: resumeObject.emailAddress,
-                                         residenceAddress: resumeObject.residenceAddress,
-                                         careerObjective: resumeObject.careerObjective,
-                                         totalYearsOfExperience: resumeObject.totalYearsOfExperience,
-                                         workSummary: workSummary, skills: skills, educationDetail: educationDetails, projectDetail: projectDetails))
+                                         personalDetail: personalDetail,
+                                         workSummary: workSummary,
+                                         skills: skills,
+                                         educationDetail: educationDetails,
+                                         projectDetail: projectDetails))
         }
         self.resumeList = resumeList
     }

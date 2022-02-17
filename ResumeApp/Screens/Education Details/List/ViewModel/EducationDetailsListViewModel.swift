@@ -25,13 +25,17 @@ protocol EducationDetailsListViewModelOutput {
 }
 
 protocol EducationDetailsListViewModelInput {
+    func viewDidLoad()
     func updateEducationDetailItem(isUpdate: Bool, at indexPath: IndexPath?, educationDetailItem: EducationDetailItem?)
     func selectedEducationDetailItem(at indexPath: IndexPath)
     func deleteEducationDetailItem(at indexPath: IndexPath)
 }
 
 final class EducationDetailsListViewModel: EducationDetailsListViewModelInput, EducationDetailsListViewModelOutput {
-    
+    private let defaultValue: [EducationDetailItem]?
+    init(defaultValue: [EducationDetailItem]?) {
+        self.defaultValue = defaultValue
+    }
     private var educationDetailsItemList: [EducationDetailItem] = [] {
         didSet {
             didUpdateEducationDetailItemsListHandler?(educationDetailsItemList)
@@ -62,6 +66,11 @@ final class EducationDetailsListViewModel: EducationDetailsListViewModelInput, E
     }
     
     // MARK: - Input
+    func viewDidLoad() {
+        if let defaultValue = defaultValue {
+            educationDetailsItemList = defaultValue
+        }
+    }
     
     func updateEducationDetailItem(isUpdate: Bool, at indexPath: IndexPath?, educationDetailItem: EducationDetailItem?) {
         guard let educationDetailItem = educationDetailItem else {

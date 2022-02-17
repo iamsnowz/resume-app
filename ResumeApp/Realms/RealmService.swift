@@ -12,7 +12,16 @@ class RealmService {
     private init() { }
     static let shared = RealmService()
     
-    var realm = try! Realm()
+    var realm: Realm {
+        get {
+            do {
+                return try Realm()
+            } catch {
+                print("Could not access database: ", error)
+            }
+            return self.realm
+        }
+    }
     
     // Write data into Realm database
     func saveObjects(objs: Object) {

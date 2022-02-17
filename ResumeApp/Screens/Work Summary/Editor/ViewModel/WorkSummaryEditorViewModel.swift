@@ -21,8 +21,8 @@ protocol WorkSummaryEditorViewModelInput {
     func setCompany(text: String?)
     func selectStartDate()
     func selectEndDate() 
-    func setStartDate(date: Date)
-    func setEndDate(date: Date)
+    func setStartDate(date: Date?)
+    func setEndDate(date: Date?)
 }
 
 final class WorkSummaryEditorViewModel: WorkSummaryEditorViewModelInput, WorkSummaryEditorViewModelOutput {
@@ -73,11 +73,11 @@ final class WorkSummaryEditorViewModel: WorkSummaryEditorViewModelInput, WorkSum
         company = text
     }
     
-    func setStartDate(date: Date) {
+    func setStartDate(date: Date?) {
         startDate = date
     }
     
-    func setEndDate(date: Date) {
+    func setEndDate(date: Date?) {
         endDate = date
     }
     

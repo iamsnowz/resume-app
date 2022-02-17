@@ -11,7 +11,7 @@ final class ResumeListViewController: UIViewController {
 
     // MARK: - IBOutlet Properties
     @IBOutlet private var tableView: UITableView!
-    
+    @IBOutlet private var notFoundLabel: UILabel!
     // MARK: - Properties
     private var viewModel: ResumeListViewModel!
     
@@ -52,6 +52,10 @@ final class ResumeListViewController: UIViewController {
         navigationItem.rightBarButtonItem = compose
     }
     
+    private func setupLabel() {
+        notFoundLabel.textColor = .theme.secondaryText
+    }
+    
     private func setupTableView() {
         tableView.register(UINib(nibName: ResumeTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ResumeTableViewCell.identifier)
         tableView.delegate = self
@@ -66,6 +70,8 @@ extension ResumeListViewController {
     private func bindingViewModel() {
         // output
         viewModel.listeningToTableViewReload = { [weak self] in
+            self?.notFoundLabel.isHidden = true
+            self?.tableView.isHidden = false
             self?.tableView.reloadData()
         }
         
@@ -81,7 +87,11 @@ extension ResumeListViewController {
             }, cancelAction: { _ in
                 
             })
-           
+        }
+        
+        viewModel.notFoundDataHandler = { [weak self] in
+            self?.notFoundLabel.isHidden = false
+            self?.tableView.isHidden = true
         }
     }
 }

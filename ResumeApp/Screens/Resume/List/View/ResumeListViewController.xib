@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumeListViewController" customModule="ResumeApp" customModuleProvider="target">
             <connections>
+                <outlet property="notFoundLabel" destination="JqN-Su-mCP" id="B5E-jM-gjx"/>
                 <outlet property="tableView" destination="RIm-g6-H8j" id="d8V-zY-PgQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,13 +25,21 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not found data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqN-Su-mCP">
+                    <rect key="frame" x="150" y="437.5" width="114" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RIm-g6-H8j" secondAttribute="bottom" id="0oe-eZ-ZbO"/>
                 <constraint firstItem="RIm-g6-H8j" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JnV-EB-u2t"/>
+                <constraint firstItem="JqN-Su-mCP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="PRk-P4-WpZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RIm-g6-H8j" secondAttribute="trailing" id="aFL-9a-B6p"/>
+                <constraint firstItem="JqN-Su-mCP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fKZ-04-8pS"/>
                 <constraint firstItem="RIm-g6-H8j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="l06-S8-q3T"/>
             </constraints>
             <point key="canvasLocation" x="132" y="132"/>

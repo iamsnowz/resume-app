@@ -21,8 +21,8 @@ protocol EducationEditorViewModelInput {
     func setGrade(text: String?)
     func selectStartYearDate()
     func selectEndYearDate()
-    func setStartYearDate(date: Date)
-    func setEndYearDate(date: Date)
+    func setStartYearDate(date: Date?)
+    func setEndYearDate(date: Date?)
     func setCGPA(text: String?)
 }
 
@@ -80,11 +80,11 @@ final class EducationEditorViewModel: EducationEditorViewModelInput, EducationEd
         grade = text
     }
     
-    func setStartYearDate(date: Date) {
+    func setStartYearDate(date: Date?) {
         startYearDate = date
     }
     
-    func setEndYearDate(date: Date) {
+    func setEndYearDate(date: Date?) {
         endYearDate = date
     }
     

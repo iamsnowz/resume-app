@@ -61,22 +61,27 @@ final class ResumeEditorViewController: UIViewController {
     
     private func setupPersonalDetailsView() {
         personalDetailsView.parentViewController = self
+        personalDetailsView.setDefaultValue(personalDetailItem: nil)
     }
     
     private func setupWorkSummaryListView() {
         workSummaryListView.parentViewController = self
+        workSummaryListView.setDefaultValue(workSummary: nil)
     }
     
     private func setupEducationDetailsListView() {
         educationDetailsListView.parentViewController = self
+        educationDetailsListView.setDefaultValue(educationDetail: nil)
     }
     
     private func setupSkillsListView() {
         skillsListView.parentViewController = self
+        skillsListView.setDefaultValue(skills: nil)
     }
     
     private func setupProjectDetailsListView() {
         projectDetailsListView.parentViewController = self
+        projectDetailsListView.setDefaultValue(projectDetail: nil)
     }
     
     private func setupCreateButton() {

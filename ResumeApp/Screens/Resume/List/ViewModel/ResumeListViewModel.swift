@@ -10,6 +10,7 @@ import RealmSwift
 
 protocol ResumeListViewModelOutput {
     var listeningToTableViewReload: (() -> Void)? { get }
+    var notFoundDataHandler: (() -> Void)? { get }
     var didSelectResumeHandler: ((IndexPath, ResumeItem) -> Void)? { get }
     
     func numberOfItem(in section: Int) -> Int
@@ -38,6 +39,7 @@ final class ResumeListViewModel: ResumeListViewModelInput, ResumeListViewModelOu
     // MARK: - Output
     var listeningToTableViewReload: (() -> Void)?
     var didSelectResumeHandler: ((IndexPath, ResumeItem) -> Void)?
+    var notFoundDataHandler: (() -> Void)?
     
     func numberOfItem(in section: Int) -> Int {
         return resumeList.count
@@ -58,12 +60,15 @@ final class ResumeListViewModel: ResumeListViewModelInput, ResumeListViewModelOu
     }
     
     func fetchResumeList() {
-        service.getResumeList { [weak self] result in
+        service.observe { [weak self] result in
             switch result {
             case .success(let results):
                 self?.prepareData(results: results)
             case .failure(let error):
-                break
+                switch error {
+                case .notFoundData:
+                    self?.notFoundDataHandler?()
+                }
             }
         }
     }

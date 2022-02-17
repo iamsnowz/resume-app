@@ -48,7 +48,7 @@ class WorkSummaryListSpec: QuickSpec {
                 }
                 
                 viewModel.didUpdateWorkItemsListHandler = { workList in
-                    // data mock has only one work
+                    // data mock has only one item
                     it("should get count equal 1") {
                         expect(workList.count).toEventually(equal(1))
                     }
@@ -101,7 +101,7 @@ class WorkSummaryListSpec: QuickSpec {
             context("show existing data") {
                 let viewModel = WorkSummaryListViewModel(defaultValue: [ResumeMock.workSummaryMock()])
                 viewModel.didUpdateWorkItemsListHandler = { workList in
-                    // data mock has only one work
+                    // data mock has only one item
                     it("should get count equal 1") {
                         expect(workList.count).toEventually(equal(1))
                     }
@@ -138,10 +138,8 @@ class WorkSummaryListSpec: QuickSpec {
                     viewModel.updateWorkItem(isUpdate: true, at: indexPath, workItem: newWork)
                 }
                 
-                viewModel.selectedWorkItem(at: IndexPath(row: 0, section: 0))
-                
                 viewModel.didUpdateWorkItemsListHandler = { workList in
-                    // data mock has only one work
+                    // data mock has only one item
                     it("should get count equal 1") {
                         expect(workList.count).toEventually(equal(1))
                     }
@@ -151,6 +149,8 @@ class WorkSummaryListSpec: QuickSpec {
                         }
                     }
                 }
+                
+                viewModel.selectedWorkItem(at: IndexPath(row: 0, section: 0))
             }
         }
     }

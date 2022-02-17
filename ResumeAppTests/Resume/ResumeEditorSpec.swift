@@ -17,34 +17,7 @@ class ResumeEditorSpec: QuickSpec {
             context("input all field") {
                 var result: Bool = false
                 var createSuccess: Bool = false
-                let viewModel = ResumeEditorViewModel(defaultValue: nil, service: ResumeServiceMock())
-                viewModel.shouldEnableButtonHandler = { isEnabled in
-                    result = isEnabled
-                    viewModel.createOrUpdate()
-                }
-                viewModel.didCreateOrUpdateFinishHandler = {
-                    createSuccess = true
-                }
-                
-                viewModel.setPersonalDetail(personanDetail: ResumeMock.personalDetailMock())
-                viewModel.setWorkSummary(workSummary: [ResumeMock.workSummaryMock()])
-                viewModel.setSkills(skills: [ResumeMock.skillMock()])
-                viewModel.setEducationDetails(educationDetails: [ResumeMock.educationDetailMock()])
-                viewModel.setProjectDetails(projectDetails: [ResumeMock.projectDetailMock()])
-                
-                it("should enable create button") {
-                    expect(result).toEventually(equal(true))
-                }
-                
-                it("should create success") {
-                    expect(createSuccess).toEventually(equal(true))
-                }
-            }
-            
-            context("input all field") {
-                var result: Bool = false
-                var createSuccess: Bool = false
-                let viewModel = ResumeEditorViewModel(defaultValue: nil, service: ResumeServiceMock())
+                let viewModel = ResumeEditorViewModel(defaultValue: nil, service: ResumeServiceMock(isSuccess: true))
                 viewModel.shouldEnableButtonHandler = { isEnabled in
                     result = isEnabled
                     viewModel.createOrUpdate()
@@ -68,11 +41,18 @@ class ResumeEditorSpec: QuickSpec {
                 }
             }
         }
+        
         describe("user update resume") {
             context("select resume") {
                 var result: Bool = false
                 var updateSuccess: Bool = false
-                let viewModel = ResumeEditorViewModel(defaultValue: ResumeMock.resumeItemMock(), service: ResumeServiceMock())
+                let defaultValue = ResumeMock.resumeItemMock()
+                let viewModel = ResumeEditorViewModel(defaultValue: defaultValue, service: ResumeServiceMock(isSuccess: true))
+                
+                it("should show old data") {
+                    expect(defaultValue.skills.first!).toEventually(equal("Swift"))
+                }
+                
                 viewModel.shouldEnableButtonHandler = { isEnabled in
                     result = isEnabled
                     viewModel.createOrUpdate()
@@ -82,13 +62,15 @@ class ResumeEditorSpec: QuickSpec {
                     updateSuccess = true
                 }
                 
+                
                 viewModel.viewDidLoad()
+                viewModel.setSkills(skills: ["Update Swift"])
                 
                 it("should enable create button") {
                     expect(result).toEventually(equal(true))
                 }
                 
-                it("should create success") {
+                it("should update success") {
                     expect(updateSuccess).toEventually(equal(true))
                 }
             }

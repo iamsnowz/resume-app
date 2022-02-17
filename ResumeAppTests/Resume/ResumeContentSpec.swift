@@ -14,16 +14,24 @@ class ResumeContentSpec: QuickSpec {
     override func spec() {
         describe("user view resume content") {
             context("") {
-                var result: Bool = false
+                var resume: ResumeItem!
                 let viewModel = ResumeContentViewModel(resume: ResumeMock.resumeItemMock())
-                viewModel.displayResumeHandler = { resume in
-                    result = true
+                viewModel.displayResumeHandler = { displayResume in
+                    resume = displayResume
                 }
                 
                 viewModel.viewDidLoad()
                 
                 it("should show data of resume") {
-                    expect(result).toEventually(equal(true))
+                    expect(resume.id).toEventually(equal("1"))
+                    expect(resume.personalDetail.resumeTitle).toEventually(equal("resume"))
+                    expect(resume.personalDetail.firstname).toEventually(equal("firstname"))
+                    expect(resume.personalDetail.lastname).toEventually(equal("lastname"))
+                    expect(resume.personalDetail.mobileNumber).toEventually(equal("0123456789"))
+                    expect(resume.personalDetail.emailAddress).toEventually(equal("email@email.com"))
+                    expect(resume.personalDetail.residenceAddress).toEventually(equal("Thailand"))
+                    expect(resume.personalDetail.careerObjective).toEventually(equal("Good Developer"))
+                    expect(resume.personalDetail.totalYearsOfExperience).toEventually(equal("5"))
                 }
                 
                 let sections = viewModel.numberOfSection()

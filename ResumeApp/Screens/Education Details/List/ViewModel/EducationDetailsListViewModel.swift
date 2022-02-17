@@ -26,7 +26,7 @@ protocol EducationDetailsListViewModelOutput {
 
 protocol EducationDetailsListViewModelInput {
     func viewDidLoad()
-    func updateEducationDetailItem(isUpdate: Bool, at indexPath: IndexPath?, educationDetailItem: EducationDetailItem?)
+    func updateEducationDetailItem(isUpdate: Bool, at indexPath: IndexPath?, educationDetailItem: EducationDetailItem)
     func selectedEducationDetailItem(at indexPath: IndexPath)
     func deleteEducationDetailItem(at indexPath: IndexPath)
 }
@@ -72,10 +72,7 @@ final class EducationDetailsListViewModel: EducationDetailsListViewModelInput, E
         }
     }
     
-    func updateEducationDetailItem(isUpdate: Bool, at indexPath: IndexPath?, educationDetailItem: EducationDetailItem?) {
-        guard let educationDetailItem = educationDetailItem else {
-            return
-        }
+    func updateEducationDetailItem(isUpdate: Bool, at indexPath: IndexPath?, educationDetailItem: EducationDetailItem) {
         
         if isUpdate, let row = indexPath?.row {
             educationDetailsItemList[row] = educationDetailItem

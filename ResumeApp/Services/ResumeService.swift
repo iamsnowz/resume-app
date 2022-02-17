@@ -14,12 +14,11 @@ enum ServiceError: Error {
 protocol ResumeServiceProtocol {
     func createOrUpdate(withResumeItem model: ResumeItem, completion: (() -> Void)?)
     func deleteResume(withId id: String)
-    func getResumeList(completion: ((Result<Results<ResumeObject>, ServiceError>) -> Void)?)
+    func observe(completion: ((Result<Results<ResumeObject>, ServiceError>) -> Void)?)
 }
 
 final class ResumeService: ResumeServiceProtocol {
     var notificationToken: NotificationToken?
-    
     func createOrUpdate(withResumeItem model: ResumeItem, completion: (() -> Void)?) {
         let workManager = WorkSummaryObjectManager()
         workManager.createOrUpdate(resumeId: model.id, workSummary: model.workSummary)
@@ -52,12 +51,15 @@ final class ResumeService: ResumeServiceProtocol {
         resumeManager.delete(withId: id)
     }
     
-    func getResumeList(completion: ((Result<Results<ResumeObject>, ServiceError>) -> Void)?) {
+    func observe(completion: ((Result<Results<ResumeObject>, ServiceError>) -> Void)?) {
         notificationToken?.invalidate()
         let objects = RealmService.shared.realm.objects(ResumeObject.self)
-        completion?(.failure(.notFoundData))
         notificationToken = objects.observe { change in
-            completion?(.success(objects))
+            if objects.isEmpty {
+                completion?(.failure(.notFoundData))
+            } else {
+                completion?(.success(objects))
+            }
         }
     }
 }

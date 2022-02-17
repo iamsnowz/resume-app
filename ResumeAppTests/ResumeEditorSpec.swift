@@ -17,7 +17,7 @@ class ResumeEditorSpec: QuickSpec {
             context("input all field") {
                 var result: Bool = false
                 var createSuccess: Bool = false
-                let viewModel = ResumeEditorViewModel(defaultValue: nil, service: ResumeServiceMock())
+                let viewModel = ResumeEditorViewModel(defaultValue: nil, service: ResumeServiceMock(isSuccess: true))
                 viewModel.shouldEnableButtonHandler = { isEnabled in
                     result = isEnabled
                     viewModel.createOrUpdate()
@@ -44,7 +44,7 @@ class ResumeEditorSpec: QuickSpec {
             context("input all field") {
                 var result: Bool = false
                 var createSuccess: Bool = false
-                let viewModel = ResumeEditorViewModel(defaultValue: nil, service: ResumeServiceMock())
+                let viewModel = ResumeEditorViewModel(defaultValue: nil, service: ResumeServiceMock(isSuccess: true))
                 viewModel.shouldEnableButtonHandler = { isEnabled in
                     result = isEnabled
                     viewModel.createOrUpdate()
@@ -72,7 +72,7 @@ class ResumeEditorSpec: QuickSpec {
             context("select resume") {
                 var result: Bool = false
                 var updateSuccess: Bool = false
-                let viewModel = ResumeEditorViewModel(defaultValue: ResumeMock.resumeItemMock(), service: ResumeServiceMock())
+                let viewModel = ResumeEditorViewModel(defaultValue: ResumeMock.resumeItemMock(), service: ResumeServiceMock(isSuccess: true))
                 viewModel.shouldEnableButtonHandler = { isEnabled in
                     result = isEnabled
                     viewModel.createOrUpdate()

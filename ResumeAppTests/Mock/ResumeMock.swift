@@ -10,7 +10,6 @@ import UIKit
 @testable import ResumeApp
 
 struct ResumeMock {
-    private init() { }
     static func resumeItemMock() -> ResumeItem {
         return ResumeItem(id: "1", personalDetail: personalDetailMock(), workSummary: [workSummaryMock()], skills: [skillMock()], educationDetail: [educationDetailMock()], projectDetail: [projectDetailMock()])
     }

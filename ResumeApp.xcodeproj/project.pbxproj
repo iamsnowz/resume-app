@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7805814827B6C23C0013F5A3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7805814727B6C23C0013F5A3 /* Realm */; };
 		7805814A27B6C23C0013F5A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7805814927B6C23C0013F5A3 /* RealmSwift */; };
+		780A1B0327BE8E5100AA6685 /* ResumeServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A1B0227BE8E5100AA6685 /* ResumeServiceSpec.swift */; };
 		786E425C27BB9C9C00EF525A /* Nibbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425827BB9C9C00EF525A /* Nibbable.swift */; };
 		786E425D27BB9C9C00EF525A /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */; };
 		786E425E27BB9C9C00EF525A /* NibFileOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */; };
@@ -128,6 +129,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		780A1B0227BE8E5100AA6685 /* ResumeServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeServiceSpec.swift; sourceTree = "<group>"; };
 		786E425827BB9C9C00EF525A /* Nibbable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nibbable.swift; sourceTree = "<group>"; };
 		786E425927BB9C9C00EF525A /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		786E425A27BB9C9C00EF525A /* NibFileOwnerLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibFileOwnerLoadable.swift; sourceTree = "<group>"; };
@@ -260,6 +262,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780A1B0127BE8E4100AA6685 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				78B5E44527BE321D006280D2 /* ResumeMock.swift */,
+				78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		786E422A27BB9ADC00EF525A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,6 +955,7 @@
 		78ACA74F27B6C1B3007AC1D1 /* ResumeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				780A1B0127BE8E4100AA6685 /* Mock */,
 				78A5104927BDE8EA00DCF489 /* SkillEditorSpec.swift */,
 				78B5E43527BE1026006280D2 /* ProjectDetailEditorSpec.swift */,
 				78B5E43927BE16B4006280D2 /* EducationDetailEditorSpec.swift */,
@@ -951,8 +963,7 @@
 				78B5E44127BE3087006280D2 /* ResumeEditorSpec.swift */,
 				78B5E43F27BE305A006280D2 /* ResumeContentSpec.swift */,
 				78F8D34327BE426900EF346C /* WorkSummaryListSpec.swift */,
-				78B5E44527BE321D006280D2 /* ResumeMock.swift */,
-				78B5E44727BE35DA006280D2 /* ResumeServiceMock.swift */,
+				780A1B0227BE8E5100AA6685 /* ResumeServiceSpec.swift */,
 			);
 			path = ResumeAppTests;
 			sourceTree = "<group>";
@@ -1204,6 +1215,7 @@
 				78B5E43627BE1026006280D2 /* ProjectDetailEditorSpec.swift in Sources */,
 				78B5E43C27BE2C7D006280D2 /* WorkSummaryEditorSpec.swift in Sources */,
 				78A5104A27BDE8EA00DCF489 /* SkillEditorSpec.swift in Sources */,
+				780A1B0327BE8E5100AA6685 /* ResumeServiceSpec.swift in Sources */,
 				78B5E44227BE3087006280D2 /* ResumeEditorSpec.swift in Sources */,
 				78B5E44627BE321D006280D2 /* ResumeMock.swift in Sources */,
 				78B5E44827BE35DA006280D2 /* ResumeServiceMock.swift in Sources */,

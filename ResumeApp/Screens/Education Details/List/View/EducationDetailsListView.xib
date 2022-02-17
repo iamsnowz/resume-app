@@ -9,29 +9,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumeListViewController" customModule="ResumeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EducationDetailsListView" customModule="ResumeApp" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="RIm-g6-H8j" id="d8V-zY-PgQ"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="tableView" destination="AwJ-7i-BG3" id="Zif-25-XOV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RIm-g6-H8j">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AwJ-7i-BG3" customClass="DynamicHeightTableView" customModule="ResumeApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RIm-g6-H8j" secondAttribute="bottom" id="0oe-eZ-ZbO"/>
-                <constraint firstItem="RIm-g6-H8j" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JnV-EB-u2t"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RIm-g6-H8j" secondAttribute="trailing" id="aFL-9a-B6p"/>
-                <constraint firstItem="RIm-g6-H8j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="l06-S8-q3T"/>
+                <constraint firstItem="AwJ-7i-BG3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="DRE-Nb-DWw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AwJ-7i-BG3" secondAttribute="bottom" id="RUQ-Ui-6Yx"/>
+                <constraint firstItem="AwJ-7i-BG3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ts0-SW-UEQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AwJ-7i-BG3" secondAttribute="trailing" id="sOK-kY-b6O"/>
             </constraints>
             <point key="canvasLocation" x="132" y="132"/>
         </view>
